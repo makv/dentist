@@ -1,8 +1,9 @@
 Dentist::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/contact"
-
+  
+  scope '(:locale)' do
+    match '/contact', :to => 'pages#contact'
+  end
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

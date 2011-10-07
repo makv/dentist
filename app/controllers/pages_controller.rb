@@ -1,10 +1,9 @@
 class PagesController < ApplicationController
   def home
-    @title = "Home Page"
   end
 
   def contact
-    @title = "Contact"
+    @title = t('.contact_title');
   end
 
 end
