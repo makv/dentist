@@ -2,7 +2,8 @@ $(document).ready(function() {
 	$('.simpleSlideShow').slideShow({
 	interval: 2
 	});
-				
+	
+$('ul.sf-menu').superfish();				
 $(".accordion").each(function(){
 
    $(this).find('.acc_container').hide();	//Hide/close all containers
@@ -15,7 +16,7 @@ $(".accordion").each(function(){
         $(this).parent().find('.acc_trigger').removeClass('active').next().slideUp(); //Remove all .acc_trigger classes and slide up the immediate next container
         $(this).toggleClass('active').next().slideDown(); //Add .acc_trigger class to clicked trigger and slide down the immediate next container
 	}
-    $(this).children("a:first").blur();	//remove the dotted box around the anchor
+    	$(this).children("a:first").blur();	//remove the dotted box around the anchor
 	return false; //Prevent the browser jump to the link anchor
 	});
 });
