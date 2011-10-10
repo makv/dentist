@@ -1,0 +1,40 @@
+<div id="site-content">
+<%= render 'header' %>
+<%= render 'navigation' %>
+  <div class="container_16">
+    <div class="panes">
+      <div class="grid_16 alpha omega main-page-section">
+        <%= render :template => 'periodontology_articles/show' %>
+      </div>
+        <% count = PeriodontologyArticle.find_all_by_locale(I18n.locale).count - 1 
+           for i in 1..count %>
+        <div class="grid_16 alpha omega main-page-section">
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+
+	$("ul.tabs").tabs("div.panes > div", {
+				
+		effect: 'fade',
+		
+		onBeforeClick: function(event, i) {
+	
+			// get the pane to be opened
+			var pane = this.getPanes().eq(i);
+	
+			// only load once. remove the if ( ... ){ } clause if you want the page to be loaded every time
+			if (pane.is(":empty")) {
+	
+				// load it with a page specified in the tab's href attribute
+				pane.load(this.getTabs().eq(i).attr("href"));
+			}
+	
+		}
+	});
+
+});
+</script>

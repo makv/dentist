@@ -1,6 +1,8 @@
 Dentist::Application.routes.draw do
   
+
   scope '(:locale)' do
+    resources :periodontology_articles
     match '/contact', :to => 'pages#contact'
   end
  

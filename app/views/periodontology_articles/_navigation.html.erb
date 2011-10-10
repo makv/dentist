@@ -1,0 +1,16 @@
+  <div class="header-nav-articles" id="header-nav">
+    <div class="container_16">
+      <div id="articles-nav-top" class="grid_16"> 
+        <!-- tabs -->
+        <ul class="tabs">
+          <% PeriodontologyArticle.find_all_by_locale(I18n.locale).each do |article| %>
+          <% if article.permalink == @article.permalink %>
+            <li class="current"><%= link_to article.title, :action => 'show', :id => article %></li>
+          <% else %>
+            <li class=""><%= link_to article.title, :action => 'show', :id => article %></li>
+          <% end end %>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
