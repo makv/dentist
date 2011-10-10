@@ -1,4 +1,4 @@
-html, body, #wrapper {height: 100%;}
+htmlhtml, body, #wrapper {height: 100%;}
 
 body > #wrapper { height: auto; min-height: 100%; }
 
@@ -14,6 +14,7 @@ body > #wrapper { height: auto; min-height: 100%; }
 #footer {
 	text-transform: uppercase;
 	font-size: 10px;
+	background-color: #FFFFFF;
 }
 
 /*Opera Fix*/
@@ -27,18 +28,16 @@ body:before {
 .container_12, .container_16 {
     background: none repeat scroll 0 0 #FFFFFF;
 }
-#header, #site-content {
-    background-color: #FFFFFF;
-}
+
 #site-content {
-    padding-bottom: -5em;
+    margin-bottom: 100px;
     font-family: CantarellRegular;
 }
 #first-paragraph {
 	padding-top: 1em;
 }
 body {
-    background: none repeat scroll 0 0 #E6E6E6;
+    background-color: #FFFFFF;
     color: #333333;
     font-family: Comfortaa,"Droid Sans",Verdana,sans-serif;
     font-size: 0.8em;
@@ -212,34 +211,36 @@ a:hover {
     background: none repeat scroll 0 0 #1f4b89;
     color: white;
 }
-#address-icon {
-	width: 40px;
-	height: 40px;
-	text-indent: -5000px;
-	margin-left: -35px;
-	margin-top: -5px;
-	background: url(<%= asset_path 'address-icon.png' %>);
+#addthis {
+	margin-top: 1px;
 }
-#phone-icon {
-	width: 40px;
-	height: 40px;
-	text-indent: -5000px;
-	margin-top: -5px;
-	background: url(<%= asset_path 'phone-icon.png' %>);
-}
-
 #copyright {
 	margin-left: -6em;
 	margin-top: 2em;
 }
-
+#address-icon {
+	width: 55px;
+	height: 55px;
+	text-indent: -5000px;
+	margin-left: -1.5em;
+	margin-top: -0.6em;
+	background: url(<%= asset_path 'address-icon.png' %>);
+}
 #footer-address {
 	margin-left: -2em;
-	margin-top: 0.5em;
+	margin-top: 0.6em;
+
+}
+#phone-icon {
+	width: 55px;
+	height: 55px;
+	text-indent: -5000px;
+	margin-top: -0.5em;
+	background: url(<%= asset_path 'phone-icon.png' %>);
 }
 #footer-tel {
-	margin-left: 2em;
-	margin-top: 0.5em;
+	margin-left: 1em;
+	margin-top: 0.6em;
 }
 
 #footer a:hover {
