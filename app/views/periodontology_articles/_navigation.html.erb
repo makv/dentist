@@ -4,11 +4,8 @@
         <!-- tabs -->
         <ul class="tabs">
           <% PeriodontologyArticle.find_all_by_locale(I18n.locale).each do |article| %>
-          <% if article.permalink == @article.permalink %>
-            <li class="current"><%= link_to article.title, :action => 'show', :id => article %></li>
-          <% else %>
-            <li class=""><%= link_to article.title, :action => 'show', :id => article %></li>
-          <% end end %>
+            <li><%= link_to(article.title, :action => 'show', :id => article) %></li>
+          <% end%>
         </ul>
       </div>
     </div>
