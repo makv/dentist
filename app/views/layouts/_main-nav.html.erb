@@ -6,7 +6,7 @@
          <li class="spacer"></li>
          <li><a href="#"><%= t('.meetthedoc') %></a></li>
          <li class="spacer"></li>
-         <li><a href="#"><%= t('.periodisease') %></a></li>
+         <li><%= link_to t('.periodisease'), periodontology_articles_path %></li>
          <li class="spacer"></li>
          <li><a href="#"><%= t('.implants') %></a></li>
          <li class="spacer"></li>
@@ -15,7 +15,7 @@
       <li class=""><a href="#" class="sf-with-ul"><%= t('.faq') %><span class="sf-sub-indicator"></span></a>
         <ul>
           <li style="width: 720px" class="offset">&nbsp;</li>
-          <li><a href="#"><%= t('.contact') %></a></li>
+          <li><%= link_to t('.contact'), contact_path %></li>
           <li><a href="#"><%= t('.links') %></a></li>
         </ul>
       </li>
