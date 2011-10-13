@@ -7,6 +7,7 @@ class Article < ActiveRecord::Base
     permalink
   end
   
+
   validates :locale, :presence => true
   validates :title, :presence => true
   validates :description, :presence => true
