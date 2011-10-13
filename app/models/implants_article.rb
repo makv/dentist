@@ -1,0 +1,2 @@
+class ImplantsArticle < Article
+end

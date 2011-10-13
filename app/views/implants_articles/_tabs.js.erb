@@ -1,0 +1,26 @@
+<script type="text/javascript">
+$(function() {
+
+	$("ul.tabs").tabs("div.panes > div", {
+	
+	  initialIndex: <%= @article.article_id-1 %>,			
+		effect: 'fade',
+		
+		onBeforeClick: function(event, i) {
+	
+			// get the pane to be opened
+			var pane = this.getPanes().eq(i);
+	
+			// only load once. remove the if ( ... ){ } clause if you want the page to be loaded every time
+			
+			if (pane.is(":empty")) {
+	
+				// load it with a page specified in the tab's href attribute
+				pane.load(this.getTabs().eq(i).attr("href"));
+			}
+	
+		}
+	});
+  
+});
+</script>

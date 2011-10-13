@@ -1,0 +1,26 @@
+<div class="grid_8 alpha">
+  <div class="accordion">
+    <h2 class="acc_trigger"><a href="#"><%= @article.title %></a></h2>
+    <div class="acc_container block">
+      <p><%= @article.description %></p>
+    </div>
+    <h2 class="acc_trigger"><a href="#">Before Treatment</a></h2>
+    <div class="acc_container block">
+    <!--image-before here -->
+    </div>
+  </div>
+</div>
+<div class="grid_8 omega">
+  <div class="accordion">
+    <h2 class="acc_trigger"><a href="#">Treatment Method</a></h2>
+    <div class="acc_container block">
+      <p><%= @article.description %></p>
+    </div>
+    <h2 class="acc_trigger"><a href="#">After Treatment</a></h2>
+    <div class="acc_container block">
+    <!--image-after here -->
+    </div>
+  </div>
+</div>
+<%= render 'accordion.js' %>
+

@@ -1,0 +1,13 @@
+  <div class="header-nav-articles" id="header-nav">
+    <div class="container_16">
+      <div id="articles-nav-top" class="grid_16"> 
+        <!-- tabs -->
+        <ul class="tabs">
+          <% ImplantsArticle.find_all_by_locale(I18n.locale).each do |article| %>
+            <li><%= link_to(article.title, :action => 'show', :id => article) %></li>
+          <% end%>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>

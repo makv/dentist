@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111012141310) do
+ActiveRecord::Schema.define(:version => 20111013155852) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -46,6 +46,19 @@ ActiveRecord::Schema.define(:version => 20111012141310) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "implants_articles", :force => true do |t|
+    t.integer  "article_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "description"
+    t.string   "method"
+    t.string   "image_before_url"
+    t.string   "image_after_url"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "periodontology_articles", :force => true do |t|
     t.integer  "article_id"
     t.string   "locale"
@@ -58,5 +71,7 @@ ActiveRecord::Schema.define(:version => 20111012141310) do
     t.datetime "updated_at"
     t.string   "permalink"
   end
+
+  add_index "periodontology_articles", ["locale"], :name => "index_periodontology_articles_on_locale"
 
 end

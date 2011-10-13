@@ -1,6 +1,10 @@
 Dentist::Application.routes.draw do
   
 
+  get "implants_articles/index"
+
+  get "implants_articles/show"
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

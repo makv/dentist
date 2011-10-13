@@ -1,0 +1,2 @@
+module ImplantsArticlesHelper
+end

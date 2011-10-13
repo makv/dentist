@@ -1,6 +1,6 @@
 class PeriodontologyArticlesController < ApplicationController
   def index
-    @article = PeriodontologyArticle.find(1)
+    @article = PeriodontologyArticle.first
   end
   
   def show
@@ -10,7 +10,6 @@ class PeriodontologyArticlesController < ApplicationController
     else
       render :template => 'periodontology_articles/index'
     end
-
   end
 
 end

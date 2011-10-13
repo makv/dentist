@@ -1,0 +1,19 @@
+<div id="site-content">
+<%= render 'header' %>
+<%= render 'navigation' %>
+  <div class="container_16">
+    <div class="panes">
+    <% ImplantsArticle.find_all_by_locale(I18n.locale).each do |article| %>
+    <% if article.permalink == @article.permalink %>
+      <div class="grid_16 alpha omega article-section">
+        <%= render :template => 'implants_articles/show' %>
+      </div>
+    <% else %>
+      <div class="grid_16 alpha omega article-section"></div>
+    <% end%>
+        <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'tabs.js' %>
+

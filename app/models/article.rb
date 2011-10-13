@@ -1,4 +1,4 @@
-class PeriodontologyArticle < ActiveRecord::Base
+class Article < ActiveRecord::Base
 
   before_create :set_helper_fields
   after_destroy :rearrange_ids
@@ -7,7 +7,6 @@ class PeriodontologyArticle < ActiveRecord::Base
     permalink
   end
   
-
   validates :locale, :presence => true
   validates :title, :presence => true
   validates :description, :presence => true
