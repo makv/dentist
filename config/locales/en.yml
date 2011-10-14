@@ -10,7 +10,8 @@ en:
     main-nav:
       home:        	"Home"
       meetthedoc:	"Meet the Doctor"
-      implants:		"Osseointegrated Implants"
+      periodisease: "Periodontal Disease"
+      implants: "Osseointegrated Implants"
       publications:	"Scientific Publications"
       faq:		"FAQ"
       contact:     	"Contact"
