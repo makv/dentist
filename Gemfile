@@ -4,7 +4,6 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'activeadmin'
 gem 'sass-rails'
 gem "meta_search",    '>= 1.1.0.pre'
@@ -28,12 +27,17 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :productiom do
+  gem 'pg'
+end
 group :development do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'execjs'
   gem 'therubyracer'
 end
 group :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'webrat'
 end
