@@ -29,6 +29,7 @@ gr:
       telephones: "Τηλέφωνα Επικοινωνίας"
       fax: "Τηλέφωνα-Φαξ"
 #END:pages
-#START:Page Titles    
+#START:Page Titles
+  home_title: "Αρχική Σελίδα"    
   contact_title: "Επικοινωνία"
 #END:Page Titles

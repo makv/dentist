@@ -9,7 +9,10 @@ Dentist::Application.routes.draw do
     resources :periodontology_articles
     resources :implants_articles
     match '/contact', :to => 'pages#contact'
+    root :to => 'pages#home'
   end
+  
+  
  
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -4,6 +4,9 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require jquery-1.6.4
+//= require jquery.slideshow.minified
+//= require jquery.tools.min
+//= require glossy
+//= require superfish
+//= require init

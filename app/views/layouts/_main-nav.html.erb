@@ -2,7 +2,7 @@
     <div class="container_16">
       <ul class="sf-menu sf-navbar sf-js-enabled sf-shadow" id="tl_navigation">
         <li class="spacer"></li>
-        <li><a href="#"><%= t('.home') %></a></li>
+        <li><%= link_to t('.home'), root_path %></li>
          <li class="spacer"></li>
          <li><a href="#"><%= t('.meetthedoc') %></a></li>
          <li class="spacer"></li>
@@ -12,7 +12,7 @@
          <li class="spacer"></li>
          <li><a href="#"><%= t('.publications') %></a></li>
          <li class="spacer"></li>
-      <li class=""><a href="#" class="sf-with-ul"><%= t('.faq') %><span class="sf-sub-indicator"></span></a>
+         <li class=""><a href="#" class="sf-with-ul"><%= t('.faq') %><span class="sf-sub-indicator"></span></a>
         <ul>
           <li style="width: 720px" class="offset">&nbsp;</li>
           <li><%= link_to t('.contact'), contact_path %></li>

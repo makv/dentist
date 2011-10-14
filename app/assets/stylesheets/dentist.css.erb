@@ -145,12 +145,6 @@ a:hover {
 	height: 50px; 
 	float:left;
 }
-#header img#headernav {
-	display: block; 
-	width: 40px; 
-	height: 40px; 
-	float:left;
-}
 .page-header + .clear {
     margin-bottom: 2em;
 }
@@ -384,6 +378,7 @@ li.slide {
     margin-right: auto;
     position: relative;
     width: 960px !important;
+    background: none repeat scroll 0 0 transparent;
 }
 .slide-canvas div {
     display: block;
@@ -456,7 +451,9 @@ li.slide {
     text-shadow: -1px -1px 0 white;
 }
 .slides #dentist-slide {
-    background: url(<%= asset_path 'slides-bg.gif' %>) repeat scroll center top white;
+    background: url(<%= asset_path 'slides-bg.gif' %>) repeat-x scroll center top transparent;
+    position:relative;
+    z-index: -1;
 }
 .slides #dentist-slide .content, .slides #dentist-slide p.small {
     color: white;
