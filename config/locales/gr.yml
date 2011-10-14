@@ -1,2 +1,34 @@
 gr:
-
+#START:layout
+  layouts:
+    application:
+      name: "Δρ. Αναστάσιος Μάμαλης"
+    header:
+      name: "Δρ. Αναστάσιος Μάμαλης"     
+      details1: "Περιοδοντολόγος - Βιοχημικός"
+      details2: "Επιστημονικός Συνεργάτης Οδοντιατρικής Σχολής Αθηνών"
+    main-nav:
+      home: "Αρχική"
+      meetthedoc: "Γνωρίστε τον Γιατρό"
+      periodisease: "Περιοδοντολογική Νόσος"
+      implants: "Εμφυτεύματα"
+      publications: "Επιστημονικές Δημοσιεύσεις"
+      faq: "Ερωτήσεις"
+      contact: "Επικοινωνία"
+      links: "Σύνδεσμοι"
+#END:layout
+#START:pages
+  pages:
+    contact:
+      title: "Επικοινωνία"
+      header: "Επικοινωνία & Οδηγίες"
+      paragraph: "Επικοινωνήστε για να κλείσετε ένα ραντεβού και ενημερωθείτε για το πως θα έρθετε στο ιατρείο."
+      address: "Διεύθυνση"
+      addressloc: "Μαρασλή 1 & Βασιλίσσης Σοφίας, Αθήνα"
+      postal: "Ταχυδρομικός Κώδικας: 106 76 "
+      telephones: "Τηλέφωνα Επικοινωνίας"
+      fax: "Τηλέφωνα-Φαξ"
+#END:pages
+#START:Page Titles    
+  contact_title: "Επικοινωνία"
+#END:Page Titles
