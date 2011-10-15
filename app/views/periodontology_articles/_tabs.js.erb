@@ -5,20 +5,21 @@ $(function() {
 	
 	  initialIndex: <%= @article.article_id-1 %>,			
 		effect: 'fade',
+    fadeInSpeed: 1500,
 		
 		onBeforeClick: function(event, i) {
 	
 			// get the pane to be opened
 			var pane = this.getPanes().eq(i);
-			pane.empty().html(<div class="grid_2 prefix_7 suffix_7">'<%= image_tag('ajax-loader.gif') %>'</div>);
+			pane.empty().html('<div class="grid_2 prefix_7 suffix_7"><%= image_tag('ajax-loader.gif', :class => "ajaxloader") %></div>');
 	
 			// only load once. remove the if ( ... ){ } clause if you want the page to be loaded every time
 			
-			//if (pane.is(":empty")) {
+			if (pane.is(":empty") || ($(".ajaxloader").length)) {
 	
 				// load it with a page specified in the tab's href attribute
 				pane.load(this.getTabs().eq(i).attr("href"));
-			//}
+			}
 	
 		}
 	});
