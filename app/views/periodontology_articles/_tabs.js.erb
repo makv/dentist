@@ -5,13 +5,13 @@ $(function() {
 	
 	  initialIndex: <%= @article.article_id-1 %>,			
 		effect: 'fade',
-    fadeInSpeed: 1500,
+    fadeInSpeed: 600,
 		
 		onBeforeClick: function(event, i) {
 	
 			// get the pane to be opened
 			var pane = this.getPanes().eq(i);
-			pane.empty().html('<div class="grid_2 prefix_7 suffix_7"><%= image_tag('ajax-loader.gif', :class => "ajaxloader") %></div>');
+			pane.empty().html('<div class="grid_2 prefix_7 suffix_7 alpha omega"><%= image_tag('ajax-loader.gif', :class => "ajaxloader") %></div>');
 	
 			// only load once. remove the if ( ... ){ } clause if you want the page to be loaded every time
 			
