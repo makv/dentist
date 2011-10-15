@@ -12,13 +12,16 @@
          <li class="spacer"></li>
          <li><a href="#"><%= t('.publications') %></a></li>
          <li class="spacer"></li>
-         <li class=""><a href="#" class="sf-with-ul"><%= t('.faq') %><span class="sf-sub-indicator"></span></a>
-        <ul>
-          <li style="width: 720px" class="offset">&nbsp;</li>
-          <li><%= link_to t('.contact'), contact_path %></li>
-          <li><a href="#"><%= t('.links') %></a></li>
-        </ul>
-      </li>
+         <li>
+            <a href="#" class="sf-with-ul"><%= t('.faq') %>
+              <span class="sf-sub-indicator"> »</span>
+            </a>
+            <ul>
+              <li style="width: 720px" class="offset">&nbsp;</li>
+              <li><%= link_to t('.contact'), contact_path %></li>
+              <li><a href="#"><%= t('.links') %></a></li>
+            </ul>
+        </li>
         <li class="spacer"></li>
        </ul>
     </div>
