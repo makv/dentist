@@ -5,10 +5,11 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'activeadmin'
-gem 'sass-rails'
+gem 'sass-rails', '3.1.1'
 gem "meta_search",    '>= 1.1.0.pre'
 
 gem "rake", "0.9.2"
+gem "paperclip", "~> 2.4.4"
 
 # Gems used only for assets and not required
 # in production environments by default.
