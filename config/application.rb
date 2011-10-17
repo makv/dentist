@@ -45,5 +45,6 @@ module Dentist
     config.assets.initialize_on_precompile = false
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
   end
 end
