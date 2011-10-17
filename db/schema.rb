@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111017141938) do
+ActiveRecord::Schema.define(:version => 20111017152814) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -50,14 +50,18 @@ ActiveRecord::Schema.define(:version => 20111017141938) do
     t.integer  "article_id"
     t.string   "locale"
     t.string   "title"
-    t.text     "description",            :limit => 1024
-    t.text     "method",                 :limit => 1024
+    t.text     "description",               :limit => 1024
+    t.text     "method",                    :limit => 1024
     t.string   "image_before_file_name"
     t.string   "image_after_file_name"
     t.string   "permalink"
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_before_content_type"
+    t.integer  "image_before_file_size"
+    t.string   "image_after_content_type"
+    t.integer  "image_after_file_size"
   end
 
 end

@@ -12,19 +12,29 @@ ActiveAdmin.register Article do
     default_actions
   end
   
-  form do |f|
-    f.inputs "Details" do
-      f.input :type, :as => :select, :collection => Article.subclasses
-      f.input :locale, :as => :select, :collection => ["en", "gr"]
-      f.input :title
+  show do |article|
+    panel("Details") do
+      attributes_table_for article do
+        [:article_id, :locale, :type, :title].each do |column|
+          row column
+        end
+      end
     end
-    f.inputs "Content" do
-      f.input :description
-      f.input :method
-      f.input :image_before, :as => :file
-      f.input :image_after, :as => :file
+    panel("Description") do
+      attributes_table_for article do
+        [:description, :method].each do |column|
+          row column
+        end
+        row "Image Before" do
+          image_tag article.image_before.url(:thumb)
+        end
+        row "Image After" do
+          image_tag article.image_after.url(:thumb)
+        end
+      end
     end
-    f.buttons
   end
+  
+  form :partial => "form"
   
 end

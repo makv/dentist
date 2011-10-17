@@ -1,0 +1,16 @@
+<%= semantic_form_for [:admin, @article] do |f| %>
+  <%= f.inputs "Details", :id => "details" do %>
+    <%= f.input :type, :as => :select, :collection => Article.subclasses %>
+    <%= f.input :locale, :as => :select, :collection => ["en", "gr"] %>
+    <%= f.input :title %>
+   <% end %>
+  <%= f.inputs "Content", :id => "content" do %>
+    <%= f.input :description %>
+    <%= f.input :method %>
+    <%= f.input :image_before, :as => :file %>
+    <%= image_tag @article.image_before.url(:thumb) %>
+    <%= f.input :image_after, :as => :file %>
+    <%= image_tag @article.image_after.url(:thumb) %>
+  <% end %>
+  <%= f.buttons :commit %> 
+<% end %>

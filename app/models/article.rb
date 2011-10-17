@@ -8,8 +8,8 @@ class Article < ActiveRecord::Base
     permalink
   end
       
-  has_attached_file :image_before
-  has_attached_file :image_after
+  has_attached_file :image_before, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :image_after, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   validates :locale, :presence => true
   validates :type, :presence => true
   validates :title, :presence => true
