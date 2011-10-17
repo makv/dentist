@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
 
   before_create :set_helper_fields
-  after_save :rearrange_ids_globally
+  after_update :rearrange_ids_globally
   after_destroy :rearrange_ids
   
   def to_param
