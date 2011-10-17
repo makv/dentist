@@ -6,6 +6,7 @@ Dentist::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   scope '(:locale)' do
+
     resources :periodontology_articles
     resources :implants_articles
     match '/contact', :to => 'pages#contact'

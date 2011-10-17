@@ -23,6 +23,19 @@ class Article < ActiveRecord::Base
   attr_accessible :image_before
   attr_accessible :image_after
   
+def self.inherited(child)
+  child.instance_eval do
+    def model_name
+      Article.model_name
+    end
+  end
+  super
+end
+
+def self.select_options
+  descendants.map{ |c| c.to_s }.sort
+end
+  
   private
     
     def set_helper_fields
