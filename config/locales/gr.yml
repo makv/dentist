@@ -16,6 +16,9 @@ gr:
       faq: "Ερωτήσεις"
       contact: "Επικοινωνία"
       links: "Σύνδεσμοι"
+    footer:
+      address1: "Μαρασλη 1 & Βασιλισσης Σοφιας"
+      address2: "Αθηνα, ΤΚ: 106 76"      
 #END:layout
 #START:pages
   pages:
@@ -24,7 +27,7 @@ gr:
       header: "Επικοινωνία & Οδηγίες"
       paragraph: "Επικοινωνήστε για να κλείσετε ένα ραντεβού και ενημερωθείτε για το πως θα έρθετε στο ιατρείο."
       address: "Διεύθυνση"
-      addressloc: "Μαρασλή 1 & Βασιλίσσης Σοφίας, Αθήνα"
+      addressloc: "Μαρασλή 1 & Βασιλίσσης Σοφίας, "
       postal: "Ταχυδρομικός Κώδικας: 106 76 "
       telephones: "Τηλέφωνα Επικοινωνίας"
       fax: "Τηλέφωνα-Φαξ"
@@ -32,4 +35,25 @@ gr:
 #START:Page Titles
   home_title: "Αρχική Σελίδα"    
   contact_title: "Επικοινωνία"
+  implants_title: "Οστεοενσωματούμενα Οδοντικά Εμφυτεύματα"
+  perio_title: "Περιοδοντολογική Νόσος"  
 #END:Page Titles
+#START:Perio Articles
+  periodontology_articles: 
+    header:
+      periodisease: "Περιοδοντολογική Νόσος"
+      description: "Μάθετε για την Περιοδοντολογική Νόσο και την μέθοδο θεραπείας"
+    show:
+      method: "Μέθοδος Θεραπείας"
+      before: "Πριν την Θεραπεία"
+      after: "Μετά την Θεραπεία"
+#START:Implants Articles
+  implants_articles:
+    header:
+      implants: "Οστεοενσωματούμενα Οδοντικά Εμφυτεύματα"
+      description: "Μάθετε για την τεχνική των Οστεοενσωματούμενων Οδοντικών Εμφυτευμάτων" 
+    show:
+      method: "Τεχνική Αποκατάστασης"
+      before: "Πριν την Θεραπεία"
+      after: "Μετά την Θεραπεία"
+#END:Implants Articles  

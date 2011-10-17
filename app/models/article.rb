@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
 
   before_create :set_helper_fields
-  before_save :rearrange_ids
+  after_save :rearrange_ids_globally
   after_destroy :rearrange_ids
   
   def to_param
@@ -39,5 +39,20 @@ class Article < ActiveRecord::Base
         article.save
       end
     end
+    
+    def rearrange_ids_globally
+      locale = ["gr", "en"]
+      classes = Article.subclasses
+        locale.each do |l|
+          classes.each do |c|
+            i=1
+            self.class.where(:locale => l, :type => c).each do |article|
+              article.update_column(:article_id, i)
+              i +=1
+            end
+          end
+        end
+    end
+            
     
 end

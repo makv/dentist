@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111015155539) do
+ActiveRecord::Schema.define(:version => 20111017141938) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20111015155539) do
     t.integer  "article_id"
     t.string   "locale"
     t.string   "title"
-    t.string   "description"
-    t.string   "method"
+    t.text     "description",            :limit => 1024
+    t.text     "method",                 :limit => 1024
     t.string   "image_before_file_name"
     t.string   "image_after_file_name"
     t.string   "permalink"
@@ -59,33 +59,5 @@ ActiveRecord::Schema.define(:version => 20111015155539) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "implants_articles", :force => true do |t|
-    t.integer  "article_id"
-    t.string   "locale"
-    t.string   "title"
-    t.string   "description"
-    t.string   "method"
-    t.string   "image_before_url"
-    t.string   "image_after_url"
-    t.string   "permalink"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "periodontology_articles", :force => true do |t|
-    t.integer  "article_id"
-    t.string   "locale"
-    t.string   "title"
-    t.string   "description"
-    t.string   "method"
-    t.string   "image_before_url"
-    t.string   "image_after_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "permalink"
-  end
-
-  add_index "periodontology_articles", ["locale"], :name => "index_periodontology_articles_on_locale"
 
 end

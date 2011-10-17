@@ -4,21 +4,21 @@
     <div class="acc_container block">
       <p><%= @article.description %></p>
     </div>
-    <h2 class="acc_trigger"><a href="#">Before Treatment</a></h2>
+    <h2 class="acc_trigger"><a href="#"><%= t('.before') %></a></h2>
     <div class="acc_container block">
-    <!--image-before here -->
+    <%= image_tag @article.image_before.url %>
     </div>
   </div>
 </div>
 <div class="grid_8 omega">
   <div class="accordion">
-    <h2 class="acc_trigger"><a href="#">Treatment Method</a></h2>
+    <h2 class="acc_trigger"><a href="#"><%= t('.method') %></a></h2>
     <div class="acc_container block">
-      <p><%= @article.description %></p>
+      <p><%= @article.method %></p>
     </div>
-    <h2 class="acc_trigger"><a href="#">After Treatment</a></h2>
+    <h2 class="acc_trigger"><a href="#"><%= t('.after') %></a></h2>
     <div class="acc_container block">
-    <!--image-after here -->
+    <%= image_tag @article.image_after.url %>
     </div>
   </div>
 </div>

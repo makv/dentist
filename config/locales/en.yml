@@ -16,6 +16,9 @@ en:
       faq: "FAQ"
       contact: "Contact"
       links: "Links"
+    footer:
+      address1: "Marasli 1 & Vasilisis Sofias"
+      address2: "Athens, Postal Code: 106 76"
 #END:layout
 #START:pages      
   pages:
@@ -32,4 +35,26 @@ en:
 #START:Page Titles         
   home_title: "Home Page"   
   contact_title: "Contact"
+  implants_title: "Osseointegrated Implants"
+  perio_title: "Periodontal Disease"
 #END:Page Titles 
+#START:Perio Articles
+  periodontology_articles:
+    header:
+      periodisease: "Periodontal Disease"
+      description: "Learn about Periodontal Disease and the corresponding treatment"
+    show:
+      method: "Treatment Method"
+      before: "Before Treatment"
+      after: "After Treatment"
+#END:Perio Articles
+#START:Implants Articles
+  implants_articles:
+    header:
+      implants: "Osseointegrated Implants"
+      description: "Learn about Osseointegrated Implants techniques" 
+    show:
+      method: "Restoration Technique"
+      before: "Before Treatment"
+      after: "After Treatment"
+#END:Implants Articles         
