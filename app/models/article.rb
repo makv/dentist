@@ -35,7 +35,7 @@ end
 def self.select_options
   descendants.map{ |c| c.to_s }.sort
 end
-  
+
   private
     
     def set_helper_fields
@@ -55,7 +55,7 @@ end
     
     def rearrange_ids_globally
       locale = ["gr", "en"]
-      classes = Article.subclasses
+      classes = Article.select_options
         locale.each do |l|
           classes.each do |c|
             i=1
