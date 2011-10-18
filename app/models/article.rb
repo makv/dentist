@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
 
   before_create :set_helper_fields
-  after_update :rearrange_ids_globally
+  after_save:rearrange_ids_globally
   after_destroy :rearrange_ids
   
   def to_param
@@ -40,26 +40,25 @@ end
     
     def set_helper_fields
       self.permalink = title
-      max_id = self.class.where(:locale => locale, :type => type).maximum(:article_id)
+      max_id = Article.where(:locale => locale, :type => type).maximum(:article_id)
       self.article_id = max_id.nil? ? 1 : max_id + 1
     end
     
     def rearrange_ids
       i=1
       self.class.where(:locale => locale, :type => type).each do |article|
-        article.article_id = i
-        i += 1
-        article.save
+        article.update_column(:article_id, i)
+        i +=1
       end
     end
     
     def rearrange_ids_globally
-      locale = ["gr", "en"]
-      classes = Article.select_options
-        locale.each do |l|
-          classes.each do |c|
-            i=1
-            self.class.where(:locale => l, :type => c).each do |article|
+      locales = ["gr", "en"]
+      sub_classes = Article.select_options
+        for l in locales         
+          for c in sub_classes
+            i=1 
+            Article.find_all_by_locale_and_type(l, c).each do |article|
               article.update_column(:article_id, i)
               i +=1
             end
