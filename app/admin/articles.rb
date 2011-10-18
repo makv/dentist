@@ -3,6 +3,10 @@ ActiveAdmin.register Article do
   controller do
     defaults :finder => :find_by_permalink
   end
+  
+  filter :type, :as => :select, :collection => Article.select_options
+  filter :locale, :as => :select, :collection => ["gr", "en"]
+  filter :title
     
   index do
     column :article_id

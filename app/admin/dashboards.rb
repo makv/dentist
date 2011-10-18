@@ -1,5 +1,16 @@
 ActiveAdmin::Dashboards.build do
 
+  section "Recent Articles" do
+    table_for Article.order("created_at desc").limit(5) do
+      column :title do |article|
+        link_to article.title, [:admin, article]
+      end
+      column :created_at
+    end
+    strong { link_to "View All Articles", admin_articles_path }
+  end
+
+
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.
