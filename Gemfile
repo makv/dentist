@@ -26,8 +26,7 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# 
+
 group :production do
   gem 'pg'
 end
