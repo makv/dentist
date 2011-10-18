@@ -4,9 +4,10 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'activeadmin'
-gem 'sass-rails', '3.1.1'
-gem "meta_search",    '>= 1.1.0.pre'
+  gem "meta_search",    '>= 1.1.0.pre'
+  gem 'sass-rails',     "~> 3.1.0.rc"
+gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
+
 
 gem "rake", "0.9.2"
 gem "paperclip", "~> 2.4.4"
