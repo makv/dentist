@@ -2,11 +2,12 @@
 <%= render 'header' %>
 <%= render 'navigation' %>
   <div class="container_16">
+    <div id="ajaxloader" class="grid_2 prefix_7 suffix_7 alpha omega"><%= image_tag('ajax-loader.gif') %></div>
     <div class="panes">
-    <% ImplantsArticle.find_all_by_locale(I18n.locale).each do |article| %>
+    <% PeriodontologyArticle.find_all_by_locale(I18n.locale).each do |article| %>
     <% if article.permalink == @article.permalink %>
       <div class="grid_16 alpha omega article-section">
-        <%= render :template => 'implants_articles/show' %>
+        <%= render :template => 'periodontology_articles/show' %>
       </div>
     <% else %>
       <div class="grid_16 alpha omega article-section"></div>
@@ -15,5 +16,5 @@
     </div>
   </div>
 </div>
-<%= render 'periodontology_articles/tabs.js' %>
+<%= render 'tabs.js' %>
 

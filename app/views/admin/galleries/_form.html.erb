@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @gallery] do |f| %>
+  <%= f.inputs "Details", :id => "details" do %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :locale %>
+   <% end %>
+  <%= f.inputs "Content", :id => "content" do %>
+    <% f.has_many :photos do |pf| %>
+      <%= pf.input :caption %> 
+      <%= pf.input :image, :as => :file %>  
+    <% end %>
+  <% end %>
+  <%= f.buttons :commit %> 
+<% end %>

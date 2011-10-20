@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111017152814) do
+ActiveRecord::Schema.define(:version => 20111020153237) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -62,6 +62,54 @@ ActiveRecord::Schema.define(:version => 20111017152814) do
     t.integer  "image_before_file_size"
     t.string   "image_after_content_type"
     t.integer  "image_after_file_size"
+  end
+
+  create_table "faqs", :force => true do |t|
+    t.text     "question",   :limit => 255
+    t.text     "answer",     :limit => 255
+    t.string   "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "galleries", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", :force => true do |t|
+    t.integer  "link_id"
+    t.string   "title"
+    t.string   "url"
+    t.string   "description"
+    t.string   "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.string   "caption"
+    t.string   "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.integer  "gallery_id"
+    t.integer  "position"
+  end
+
+  create_table "publications", :force => true do |t|
+    t.integer  "pub_id"
+    t.string   "title"
+    t.string   "description"
+    t.date     "pub_date"
+    t.string   "locale"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

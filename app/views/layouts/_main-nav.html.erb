@@ -4,22 +4,19 @@
         <li class="spacer"></li>
         <li><%= link_to t('.home'), root_path %></li>
          <li class="spacer"></li>
-         <li><a href="#"><%= t('.meetthedoc') %></a></li>
+         <li><%= link_to t('.meetthedoc'), bio_path %></li>
          <li class="spacer"></li>
          <li><%= link_to t('.periodisease'), periodontology_articles_path %></li>
          <li class="spacer"></li>
          <li><%= link_to t('.implants'), implants_articles_path %></li>
          <li class="spacer"></li>
-         <li><a href="#"><%= t('.publications') %></a></li>
+         <li><%= link_to t('.publications'), publications_path, :class => "sf-with-ul" %></li>
          <li class="spacer"></li>
-         <li>
-            <a href="#" class="sf-with-ul"><%= t('.faq') %>
-              <span class="sf-sub-indicator"> »</span>
-            </a>
+         <li> <%= link_to t('.faq'), faqs_path, :class => "sf-with-ul" %>
             <ul>
               <li style="width: 720px" class="offset">&nbsp;</li>
               <li><%= link_to t('.contact'), contact_path %></li>
-              <li><a href="#"><%= t('.links') %></a></li>
+              <li><%= link_to t('.links'), links_path %></li>
             </ul>
         </li>
         <li class="spacer"></li>

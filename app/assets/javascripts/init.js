@@ -1,6 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function($) {
+
+$("a[rel^='prettyPhoto']").prettyPhoto();
 	$('.simpleSlideShow').slideShow({
-	interval: 3
+		interval: 3
 	});
 	
 $('ul.sf-menu').superfish();				
@@ -13,4 +15,5 @@ $('#ajaxloader')
         $(this).hide();
     })
 ;
+
 });

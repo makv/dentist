@@ -1,5 +1,4 @@
 Dentist::Application.routes.draw do
-  
 
   ActiveAdmin.routes(self)
 
@@ -9,8 +8,13 @@ Dentist::Application.routes.draw do
 
     resources :periodontology_articles
     resources :implants_articles
+    resources :publications
+    resources :links
+    resources :faqs
     match '/contact', :to => 'pages#contact'
+    match '/bio', :to => 'pages#bio'
     root :to => 'pages#home'
+
   end
   
   

@@ -10,3 +10,5 @@
 //= require glossy
 //= require superfish
 //= require init
+//= require fadeinout
+//= require jquery.prettyPhoto

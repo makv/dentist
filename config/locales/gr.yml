@@ -35,6 +35,7 @@ gr:
 #START:Page Titles
   home_title: "Αρχική Σελίδα"    
   contact_title: "Επικοινωνία"
+  bio_title: "Γνωρίστε τον Γιατρό"
   implants_title: "Οστεοενσωματούμενα Οδοντικά Εμφυτεύματα"
   perio_title: "Περιοδοντολογική Νόσος"  
 #END:Page Titles
