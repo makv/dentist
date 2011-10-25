@@ -1,4 +1,8 @@
 gr:
+#active admin missing dashboard :(
+  active_admin:
+    dashboard: "Dashboard"
+#dashboard end
 #START:layout
   layouts:
     application:
