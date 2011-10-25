@@ -47,5 +47,8 @@ module Dentist
     config.assets.version = '1.0'
     #I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
     #I18n.locale = :gr
+    #config.i18n.default_locale = :gr
+    #Adding the below makes it work as expected at heroku
+    config.i18n.locale = :gr
   end
 end

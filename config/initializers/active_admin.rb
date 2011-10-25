@@ -6,7 +6,7 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.before_filter do
-    I18n.locale = 'en'
+    I18n.locale = :en
   end
   config.site_title = "Dr. Anastasios Mamalis | Admin Panel"
 
