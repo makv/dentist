@@ -1,2 +1,8 @@
-<h1>Links#index</h1>
-<p>Find me in app/views/links/index.html.erb</p>
+<%= render 'header' %>
+<div class="container_16">
+  <div id = "first-paragraph" class="grid_16">
+  <% Link.find_all_by_locale(I18n.locale).each do |link| %>
+    <%= link_to(link.title, link.url, :title => link.description, :class => "links") %>
+  <% end %>
+  </div>
+</div>

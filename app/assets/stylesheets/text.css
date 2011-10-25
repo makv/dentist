@@ -16,22 +16,22 @@ hr {
     height: 0;
 }
 h1 {
-    font-size: 25px;
-}
-h2 {
     font-size: 23px;
 }
-h3 {
+h2 {
     font-size: 21px;
 }
-h4 {
+h3 {
     font-size: 19px;
 }
-h5 {
+h4 {
     font-size: 17px;
 }
-h6 {
+h5 {
     font-size: 15px;
+}
+h6 {
+    font-size: 13px;
 }
 ol {
     list-style: decimal outside none;
@@ -40,7 +40,8 @@ ul {
     list-style: disc outside none;
 }
 li {
-    margin-left: 30px;
+    margin-left: 40px;
+    margin-bottom: 5px;
 }
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     margin-bottom: 20px;
@@ -57,52 +58,3 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     font-style: normal;
 
 }
-
-@font-face {
-    font-family: 'CantarellRegular';
-    src: url('Cantarell-Regular-webfont.eot');
-    src: url('Cantarell-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Cantarell-Regular-webfont.woff') format('woff'),
-         url('Cantarell-Regular-webfont.ttf') format('truetype'),
-         url('Cantarell-Regular-webfont.svg#CantarellRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'CantarellOblique';
-    src: url('Cantarell-Oblique-webfont.eot');
-    src: url('Cantarell-Oblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Cantarell-Oblique-webfont.woff') format('woff'),
-         url('Cantarell-Oblique-webfont.ttf') format('truetype'),
-         url('Cantarell-Oblique-webfont.svg#CantarellOblique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'CantarellBold';
-    src: url('Cantarell-Bold-webfont.eot');
-    src: url('Cantarell-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Cantarell-Bold-webfont.woff') format('woff'),
-         url('Cantarell-Bold-webfont.ttf') format('truetype'),
-         url('Cantarell-Bold-webfont.svg#CantarellBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'CantarellBoldOblique';
-    src: url('Cantarell-BoldOblique-webfont.eot');
-    src: url('Cantarell-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Cantarell-BoldOblique-webfont.woff') format('woff'),
-         url('Cantarell-BoldOblique-webfont.ttf') format('truetype'),
-         url('Cantarell-BoldOblique-webfont.svg#CantarellBoldOblique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-

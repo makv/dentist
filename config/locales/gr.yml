@@ -22,6 +22,13 @@ gr:
 #END:layout
 #START:pages
   pages:
+    bio:
+      header: "Βιογραφικό"
+      paragraph: "Γνωρίστε τον Γιατρό"
+      profile: "Προφίλ"
+      work: "Εργασιακή Εμπειρία"
+      education: "Εκπαίδευση"
+      awards: "Επιστημονικές Διακρίσεις"    
     contact:
       title: "Επικοινωνία"
       header: "Επικοινωνία & Οδηγίες"
@@ -37,7 +44,9 @@ gr:
   contact_title: "Επικοινωνία"
   bio_title: "Γνωρίστε τον Γιατρό"
   implants_title: "Οστεοενσωματούμενα Οδοντικά Εμφυτεύματα"
-  perio_title: "Περιοδοντολογική Νόσος"  
+  perio_title: "Περιοδοντολογική Νόσος"
+  link_title: "Σύνδεσμοι"
+  faq_title: "Συχνές Ερωτήσεις"  
 #END:Page Titles
 #START:Perio Articles
   periodontology_articles: 
@@ -48,6 +57,7 @@ gr:
       method: "Μέθοδος Θεραπείας"
       before: "Πριν την Θεραπεία"
       after: "Μετά την Θεραπεία"
+#END:Perio Articles      
 #START:Implants Articles
   implants_articles:
     header:
@@ -57,4 +67,16 @@ gr:
       method: "Τεχνική Αποκατάστασης"
       before: "Πριν την Θεραπεία"
       after: "Μετά την Θεραπεία"
-#END:Implants Articles  
+#END:Implants Articles
+#START:Links
+  links:
+    header:
+      title: "Σύνδεσμοι"
+      description: "Χρήσιμοι σύνδεσμοι στο Διαδίκτυο"
+#END:links
+#START:Faq
+  faqs:
+      header:
+        title: "Συχνές Ερωτήσεις"
+        description: "Απαντήσεις σε Συχνές Ερωτήσεις"
+#END:faq

@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
+gem 'thin'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'sass-rails',     "~> 3.1.0.rc"
 gem 'activeadmin', '0.3.2' #:git => 'https://github.com/gregbell/active_admin.git'
@@ -38,6 +38,7 @@ group :development do
   gem 'execjs'
   gem 'therubyracer'
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'annotate'
 end
 group :test do
   gem 'sqlite3'

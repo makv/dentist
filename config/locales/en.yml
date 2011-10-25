@@ -22,6 +22,13 @@ en:
 #END:layout
 #START:pages      
   pages:
+    bio:
+      header: "Biography"
+      paragraph: "Meet the Doctor"
+      profile: "Profile"
+      work: "Work Experience"
+      education: "Education"
+      awards: "Awards & Achievements"
     contact:
       title: "Contact"
       header: "Contact & Directions"
@@ -38,6 +45,8 @@ en:
   bio_title: "Meet the Doctor"
   implants_title: "Osseointegrated Implants"
   perio_title: "Periodontal Disease"
+  link_title: "Links"
+  faq_title: "Frequently Asked Questions"
 #END:Page Titles 
 #START:Perio Articles
   periodontology_articles:
@@ -58,4 +67,16 @@ en:
       method: "Restoration Technique"
       before: "Before Treatment"
       after: "After Treatment"
-#END:Implants Articles         
+#END:Implants Articles
+#START:Links
+  links:
+      header:
+        title: "Links"
+        description: "Useful links on the Web"
+#END:links
+#START:Faq
+  faqs:
+      header:
+        title: "Frequently Asked Questions"
+        description: "Read Answers to Commonly Asked Questions"
+#END:faq

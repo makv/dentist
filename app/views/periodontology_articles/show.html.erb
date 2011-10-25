@@ -6,7 +6,9 @@
     </div>
     <h2 class="acc_trigger"><a href="#"><%= t('.before') %></a></h2>
     <div class="acc_container block">
-    <%= image_tag @article.image_before.url %>
+    <% if !@article.image_before_file_size.nil? %>
+      <%= image_tag @article.image_before.url %>
+    <% end %>
     </div>
   </div>
 </div>
@@ -18,7 +20,9 @@
     </div>
     <h2 class="acc_trigger"><a href="#"><%= t('.after') %></a></h2>
     <div class="acc_container block">
-    <%= image_tag @article.image_after.url %>
+    <% if !@article.image_after_file_size.nil? %>
+      <%= image_tag @article.image_after.url %>
+    <% end %>
     </div>
   </div>
 </div>

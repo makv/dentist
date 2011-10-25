@@ -1,2 +1,31 @@
-<h1>Faqs#index</h1>
-<p>Find me in app/views/faqs/index.html.erb</p>
+<% faqs = Faq.find_all_by_locale(I18n.locale) %>
+<%= render 'header' %>
+<div class="container_16">
+  <div id = "first-paragraph" class="grid_16">
+    <div class="grid_8 alpha">
+      <div class="accordion">
+        <% for i in 0 ... faqs.size %>
+          <% if (i+1)%2 > 0 %> 
+          <h2 class="acc_trigger"><a href="#"><%= faqs[i].question %></a></h2>
+            <div class="acc_container block">
+              <p><%= faqs[i].answer %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="grid_8 omega">
+      <div class="accordion">
+        <% for i in 0 ... faqs.size %>
+          <% if (i+1)%2 == 0 %> 
+          <h2 class="acc_trigger"><a href="#"><%= faqs[i].question %></a></h2>
+            <div class="acc_container block">
+              <p><%= faqs[i].answer %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>    
+  </div>
+</div>
+<%= render 'accordion.js' %>
