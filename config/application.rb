@@ -46,9 +46,8 @@ module Dentist
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
-    I18n.locale = :en
     config.i18n.default_locale = :gr
-    #Adding the below makes it work as expected at heroku
+    # heroku
     config.i18n.locale = :gr
   end
 end
