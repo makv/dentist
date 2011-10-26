@@ -47,6 +47,7 @@ en:
   perio_title: "Periodontal Disease"
   link_title: "Links"
   faq_title: "Frequently Asked Questions"
+  pub_title: "Scientific Publications"
 #END:Page Titles 
 #START:Perio Articles
   periodontology_articles:
@@ -80,3 +81,9 @@ en:
         title: "Frequently Asked Questions"
         description: "Read Answers to Commonly Asked Questions"
 #END:faq
+#START:Publications
+  publications:
+      header:
+        title: "Scientific Publications"
+        description: "Download and view Scientific Publications by the Doctor"
+#END:Publications

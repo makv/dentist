@@ -50,7 +50,8 @@ gr:
   implants_title: "Οστεοενσωματούμενα Οδοντικά Εμφυτεύματα"
   perio_title: "Περιοδοντολογική Νόσος"
   link_title: "Σύνδεσμοι"
-  faq_title: "Συχνές Ερωτήσεις"  
+  faq_title: "Συχνές Ερωτήσεις"
+  pub_title: "Επιστημονικές Δημοσιεύσεις"
 #END:Page Titles
 #START:Perio Articles
   periodontology_articles: 
@@ -84,3 +85,9 @@ gr:
         title: "Συχνές Ερωτήσεις"
         description: "Απαντήσεις σε Συχνές Ερωτήσεις"
 #END:faq
+#START:Publications
+  publications:
+      header:
+        title: "Επιστημονικές Δημοσιεύσεις"
+        description: "Δείτε την λίστα με τις Επιστημονικές Δημοσιεύσεις του Γιατρού"
+#END:Publications
