@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$('.simpleSlideShow').slideShow({
 		interval: 3
 		});
-	$("#first-paragraph a[title]").tooltip({ position: "center right" });
+	$("#first-paragraph a[title]").tooltip({ position: "center right", effect: "fade" });
 	$('ul.sf-menu').superfish();				
 	$('#ajaxloader')
 		.hide()  // hide it initially

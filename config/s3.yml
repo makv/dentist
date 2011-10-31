@@ -1,0 +1,8 @@
+development:
+  aws_access_key: AKIAJSBXKELAN3YCKFCQ
+  aws_secret_access_key: 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
+  bucket_base_name: rails-development
+production:
+  aws_access_key: AKIAJSBXKELAN3YCKFCQ
+  aws_secret_access_key: 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
+  bucket_base_name: mamalis

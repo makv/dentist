@@ -9,9 +9,9 @@ gem 'sass-rails',     "~> 3.1.0.rc"
 gem 'activeadmin', '0.3.2' #:git => 'https://github.com/gregbell/active_admin.git'
 gem 'acts_as_list'
 
-
 gem "rake", "0.9.2"
 gem "paperclip", "~> 2.4.4"
+gem "aws-s3"
 
 # Gems used only for assets and not required
 # in production environments by default.

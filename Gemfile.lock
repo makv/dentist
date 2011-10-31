@@ -42,6 +42,10 @@ GEM
     annotate (2.4.0)
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     cocaine (0.2.0)
@@ -189,6 +193,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
@@ -197,6 +202,7 @@ DEPENDENCIES
   activeadmin (= 0.3.2)
   acts_as_list
   annotate
+  aws-s3
   coffee-rails (~> 3.1.0)
   execjs
   jquery-rails
