@@ -1,5 +1,5 @@
 <div id="footer"> 
-  <div class="container_16">
+  <div class="container_16 exploded-rounded-corners">
     <div id="addthis" class="grid_4">
       <!-- AddThis Button BEGIN -->
       <div class="addthis_toolbox addthis_default_style addthis_32x32_style" style=" position:relative; float:left;">
@@ -15,18 +15,18 @@
       <p>&copy; Copyright 2011 Dr Anastasios A. Mamalis</p>
     </div>
     <div class="grid_1">
-      <h4 id="address-icon">
+      <%= image_tag('address-icon.png', :id => "address-icon") %>
     </div>
-    <div id="footer-address" class="grid_4">
-        <p><%= t('.address1') %><br/>
-        <%= t('.address2') %>
-        </p>
+    <div id="footer-address" class="grid_3">
+      <p><%= t('.address1') %>
+      <%= t('.address2') %>
+      </p>
     </div>
     <div class="grid_1">
-      <h4 id="phone-icon">
+      <%= image_tag('phone-icon.png', :id => "phone-icon") %>
     </div>
     <div id="footer-tel" class="grid_2">
-      <p>+30 210 72 59 059</br>+30 210 72 58 878</p>
+      <p>+30 210 72 59 059 +30 210 72 58 878</p>
     </div>
   </div>
 </div>

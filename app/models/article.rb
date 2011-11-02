@@ -31,23 +31,23 @@ class Article < ActiveRecord::Base
   end
       
   has_attached_file :image_before, :styles => { :medium => "300x300>", :thumb => "100x100>" },
-                            :storage => :s3,
-                            :bucket => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["bucket_base_name"],
-                            :path => "articles/:id/:basename-:style.:extension",
-                            :s3_credentials => {
-                              :access_key_id => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_access_key"],
-                              :secret_access_key => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_secret_access_key"]
-                            },
-                            :url  => ":s3_eu_url"
+                    :storage => :s3,
+                    :bucket => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["bucket_base_name"],
+                    :path => "articles/:id/:basename-:style.:extension",
+                    :s3_credentials => {
+                      :access_key_id => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_access_key"],
+                      :secret_access_key => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_secret_access_key"]
+                    },
+                    :url  => ":s3_eu_url"
   has_attached_file :image_after, :styles => { :medium => "300x300>", :thumb => "100x100>" },
-                            :storage => :s3,
-                            :bucket => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["bucket_base_name"],
-                            :path => "articles/:id/:basename-:style.:extension",
-                            :s3_credentials => {
-                              :access_key_id => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_access_key"],
-                              :secret_access_key => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_secret_access_key"]
-                            },
-                            :url  => ":s3_eu_url"
+                    :storage => :s3,
+                    :bucket => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["bucket_base_name"],
+                    :path => "articles/:id/:basename-:style.:extension",
+                    :s3_credentials => {
+                      :access_key_id => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_access_key"],
+                      :secret_access_key => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_secret_access_key"]
+                    },
+                    :url  => ":s3_eu_url"
   validates :locale, :presence => true
   validates :type, :presence => true
   validates :title, :presence => true

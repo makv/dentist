@@ -16,7 +16,15 @@
 #
 
 class Publication < ActiveRecord::Base
-  has_attached_file :pub_pdf, :default_url => '/file-missing.png'
+  has_attached_file :pub_pdf, :default_url => '/file-missing.png',
+                    :storage => :s3,
+                    :bucket => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["bucket_base_name"],
+                    :path => "publications/:id/:basename.:extension",
+                    :s3_credentials => {
+                      :access_key_id => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_access_key"],
+                      :secret_access_key => YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]["aws_secret_access_key"]
+                    },
+                    :url  => ":s3_eu_url"
   before_post_process :forbid_pdf
   validates_attachment_content_type :pub_pdf, :content_type => [ 'application/pdf' ],
                                     :message => 'file must be of filetype .pdf'
