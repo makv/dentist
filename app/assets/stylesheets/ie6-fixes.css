@@ -1,0 +1,129 @@
+/* IE6 css fixer v0.95: Thu, 03 Nov 2011 13:28:21 +0100 */
+
+/* ============================================= */
+/* safe settings                                 */
+
+/* add display:inline to floated elements */
+* html .grid_1, * html .grid_2, * html .grid_3, * html .grid_4, * html .grid_5, * html .grid_6, * html .grid_7, * html .grid_8, * html .grid_9, * html .grid_10, * html .grid_11, * html .grid_12, * html .grid_13, * html .grid_14, * html .grid_15, * html .grid_16,
+* html h2.acc_trigger,
+* html h2.acc_trigger a,
+* html #header img.lang,
+* html ul.tabs li,
+* html .slides #dentist-slide li a,
+* html .sf-menu,
+* html .sf-menu li,
+* html .sf-navbar ul li,
+* html .minigallery li,
+* html .pp_content_container .pp_details,
+* html .pp_social,
+* html .pp_social .facebook,
+* html .pp_nav,
+* html .pp_nav p,
+* html .pp_nav .pp_play, * html .pp_nav .pp_pause,
+* html a.pp_arrow_previous, * html a.pp_arrow_next,
+* html .pp_gallery div,
+* html .pp_gallery ul,
+* html .pp_gallery ul a,
+* html .pp_gallery li,
+* html a.pp_next,
+* html a.pp_previous,
+* html .article-section img, * html .main-page-section img,
+* html .minigallery, * html .pp_social .twitter {display:inline;}
+
+/* convert min height values */
+* html body &gt; #wrapper {height:100%;}
+
+
+/* fix negative margins */
+* html #header-left h2#details1,
+* html #header-left h2#details2,
+* html #footer,
+* html #copyright,
+* html .slideShow .navigation,
+* html .pub-list img,
+* html .sf-menu li,
+* html .pp_gallery,
+* html .pp_loaderIcon {position:relative; zoom:1;}
+
+/* add zoom:1 to overflow:hidden */
+* html #header-left h2#details1,
+* html #header-left h2#details2,
+* html #footer,
+* html #copyright,
+* html .slideShow .navigation,
+* html .pub-list img,
+* html .sf-menu li,
+* html .pp_gallery,
+* html .pp_loaderIcon {zoom:1;}
+
+/* add zoom:1 to pos:relative elements */
+* html .slide-canvas,
+* html .slides #dentist-slide,
+* html sub,
+* html sup,
+* html .sf-menu a,
+* html .sf-navbar,
+* html .minigallery li,
+* html div.pp_default .pp_nav,
+* html .pp_content_container,
+* html .pp_gallery ul,
+* html .pp_top,
+* html .pp_bottom,
+* html .push_1,
+* html .pull_1,
+* html .push_2,
+* html .pull_2,
+* html .push_3,
+* html .pull_3,
+* html .push_4,
+* html .pull_4,
+* html .push_5,
+* html .pull_5,
+* html .push_6,
+* html .pull_6,
+* html .push_7,
+* html .pull_7,
+* html .push_8,
+* html .pull_8,
+* html .push_9,
+* html .pull_9,
+* html .push_10,
+* html .pull_10,
+* html .push_11,
+* html .pull_11,
+* html .push_12,
+* html .pull_12,
+* html .push_13,
+* html .pull_13,
+* html .push_14,
+* html .pull_14,
+* html .push_15,
+* html .pull_15,
+* html .sf-navbar li li,
+* html div.pp_default .pp_details,
+* html div.light_rounded .pp_details,
+* html div.dark_rounded .pp_details,
+* html div.dark_square .pp_details,
+* html div.light_square .pp_details,
+* html div.facebook .pp_details {zoom:1;}
+
+/* add transparancy */
+* html div.pp_default .pp_close:hover, * html div.pp_default .pp_nav .pp_play:hover, * html div.pp_default .pp_nav .pp_pause:hover, * html div.pp_default .pp_arrow_next:hover, * html div.pp_default .pp_arrow_previous:hover {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);}
+
+
+/* add zoom:1; display:inline; to inline-block elements */
+* html .slideShow .navigation a {zoom:1; display:inline;}
+
+/* add overflow:visible to (submit) buttons */
+ * html input, * html button {overflow:visible;}
+
+
+/* ============================================= */
+/* potentially harmful settings                  */
+
+/* PNG fix */
+* html h2.acc_trigger,
+* html #header .container_16,
+* html #footer,
+* html .tooltip,
+* html div.pp_default .pp_top .pp_left{behavior: expression((this.runtimeStyle.behavior = "none") && (this.currentStyle.backgroundImage.toString().toLowerCase().indexOf('.png')>-1) && (this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.currentStyle.backgroundImage.toString().replace('url("','').replace('")','') + "', sizingMethod='crop')", this.runtimeStyle.zoom = 1, this.runtimeStyle.backgroundImage = "none"));}
