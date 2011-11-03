@@ -31,7 +31,7 @@
 * html .minigallery, * html .pp_social .twitter {display:inline;}
 
 /* convert min height values */
-* html body &gt; #wrapper {height:100%;}
+* html body > #wrapper {height:100%;}
 
 
 /* fix negative margins */
