@@ -70,6 +70,7 @@ body > #wrapper { height: auto; min-height: 100%;}
 	height: 100%;
 	overflow: auto;
 	font-family: "Droid Sans",Verdana,sans-serif;
+	padding-bottom: 50px;
 }
 
 #footer {
@@ -454,7 +455,7 @@ li.slide {
 	padding:25px;
 	color:#294172;
 }
-.main-page-section h2 {
+.main-page-section h3 {
     background-color: #C4D0E3;
     color: #3C6EB4;
     margin-bottom: 1em;
@@ -462,11 +463,21 @@ li.slide {
     padding: 10px;
     text-align: center;
 }
+#accordion h3 {
+	cursor:pointer;	
+}
 .main-page-section h4 {
     color: #294172;
     margin-bottom: 1px;
     margin-top: 1px;
     padding: 5px;
+    text-align: left;
+}
+.main-page-section h6 {
+    color: #294172;
+    padding: 5px 0 5px 0;
+    margin-bottom: 1px;
+    margin-top: 1px;
     text-align: left;
 }
 .main-page-section img {
@@ -476,24 +487,24 @@ li.slide {
 .main-page-section p{
 	text-align: justify;
 }
-.checkmark-list{
-	list-style: disc outside url(<%= asset_path 'list-item.png' %>);
-}
-.checkmark-list li{
-	color: #294172;
-}
-.pub-list li{
-	background-image: url(<%= asset_path 'article-32.png' %>);
+.research-list li{
+	background-image: url(<%= asset_path 'microscope.png' %>);
 	background-repeat: no-repeat;
 	background-position: left center;
+	padding-top: 10px;
 }
-.pub-list img{
-
-	margin-left: 50px;
-	margin-top: -5px;
+.research-list p{
+    font-weight: bold;
+    color: #294172;
+    margin-left: 50px;
+}
+.pub-list li{
+	background-image: url(<%= asset_path 'author-32.png' %>);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-top: 8px;
 }
 .pub-list p{
-    font-size: 14px;
     font-weight: bold;
     color: #294172;
     margin-left: 50px;
@@ -509,4 +520,14 @@ li.slide {
     font-weight: bold;
     color: #294172;
     margin-left: 80px;
+}
+.dotted-first {
+	border-bottom: 2px dashed #5A89D4;
+}
+.dotted-last {
+	padding-top:12px;
+}
+.dotted {
+	border-bottom: 2px dashed #5A89D4;
+	padding-top:12px;
 }

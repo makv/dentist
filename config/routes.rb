@@ -8,11 +8,12 @@ Dentist::Application.routes.draw do
 
     resources :periodontology_articles
     resources :implants_articles
-    resources :publications
+    #resources :publications
     resources :links
     resources :faqs
     match '/contact', :to => 'pages#contact'
     match '/bio', :to => 'pages#bio'
+    match '/research', :to => 'pages#research'
     root :to => 'pages#home'
 
   end

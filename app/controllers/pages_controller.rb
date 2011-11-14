@@ -11,4 +11,7 @@ class PagesController < ApplicationController
     @title = t('.bio_title');
   end
 
+  def research
+    @title = t('.research_title')
+  end
 end

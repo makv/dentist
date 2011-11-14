@@ -9,28 +9,129 @@
     <div class="clear"></div>
   </div>
   <div id="first-paragraph" class="container_16 main-page-section">
-    <div class="grid_8 alpha">
-      <h2><%= t('.profile') %></h2>
+    <div id="accordion" class="grid_16 alpha omega">
+      <h3 class="current">Profile</h3>
+      <div class="pane" style="display:block">
         <p><img src="<%= asset_path 'profile.png' %>"></img>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec dolor tellus, eu imperdiet nulla. Curabitur volutpat enim dui, id dapibus purus. Quisque urna magna, eleifend rhoncus tempus vel, bibendum a ipsum. Fusce at vulputate ligula. Nam ut magna dolor, sit amet pulvinar mauris. Suspendisse potenti. Pellentesque nec est at lorem feugiat auctor sed at sem. Vestibulum sit amet felis urna. Quisque tortor tortor, porta a lobortis ac, faucibus id erat. In a augue odio, id dignissim libero. Nunc lacinia tempor arcu ut sagittis. Ut vel enim et erat imperdiet aliquet fermentum at arcu. Aliquam scelerisque rhoncus lectus, id vestibulum nunc blandit vel. Aenean vel risus id augue dignissim sagittis id a est. Nam nisi sem, ullamcorper in iaculis quis, hendrerit at diam.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec dolor tellus, eu imperdiet nulla. Curabitur volutpat enim dui,
+                 id dapibus purus. Quisque urna magna, eleifend rhoncus tempus vel, bibendum a ipsum. Fusce at vulputate ligula. Nam ut magna dolor,
+                  sit amet pulvinar mauris. Suspendisse potenti. Pellentesque nec est at lorem feugiat auctor sed at sem. Vestibulum sit amet felis urna.
+                   Quisque tortor tortor, porta a lobortis ac, faucibus id erat. In a augue odio, id dignissim libero. Nunc lacinia tempor arcu ut sagittis.
+                    Ut vel enim et erat imperdiet aliquet fermentum at arcu. Aliquam scelerisque rhoncus lectus, id vestibulum nunc blandit vel. Aenean vel 
+                    risus id augue dignissim sagittis id a est. Nam nisi sem, ullamcorper in iaculis quis, hendrerit at diam.Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Aliquam nec dolor tellus, eu imperdiet nulla. Curabitur volutpat enim dui, id dapibus purus. Quisque urna magna, eleifend rhoncus 
+                    tempus vel, bibendum a ipsum. Fusce at vulputate ligula. Nam ut magna dolor, sit amet pulvinar mauris. Suspendisse potenti. Pellentesque nec est at
+                     lorem feugiat auctor sed at sem. Vestibulum sit amet felis urna. Quisque tortor tortor, porta a lobortis ac, faucibus id erat. In a augue odio, id
+                      dignissim libero. Nunc lacinia tempor arcu ut sagittis. Ut vel enim et erat imperdiet aliquet fermentum at arcu. Aliquam scelerisque rhoncus lectus,
+                       id vestibulum nunc blandit vel. Aenean vel risus id augue dignissim sagittis id a est. Nam nisi sem, ullamcorper in iaculis quis, hendrerit at diam.
         </p>
-      <h2><%= t('.work') %></h2>
-      <h4>Dentist at</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <h4>Dentist at</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="grid_8 omega">
-      <h2><%= t('.education') %></h2>
-        <h4>University of</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <h4>University of</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <h2><%= t('.awards') %></h2>
-      <ul class="checkmark-list">
-        <li><h6>Award #1</h6></li>
-        <li><h6>Award #2</h6></li>
-      </ul>
+      </div>
+      <h3>Education &amp; Diplomas</h3>
+      <div class="pane" style="display:none">
+      <div class="dotted-first"> 
+        <h6>June 2003 - July 2009</h6>
+        <p>PhD, Department of Experimental Physiology, Laboratory of Molecular Endocrinology, School of Medicine, University of Athens, Greece.
+        (Director and Head of the Department: Professor Michael Koutsilieris) </p>
+        <p><b>PhD Research project:</b> Type I collagen three-dimensional primary periodontal ligament cell culture systems and analysis of osteoblastic 
+        gene profile variations upon culture on smooth, hydroxyapatite, dual acid etched and sand blasted-acid etched Titanium surfaces.</p>
+      </div>
+      <div class="dotted">
+        <h6>September 2005 - July 2008</h6>
+        <p>Master’s Degree in Periodontology, Department of Periodontology, School of Dentistry, University of Athens, Greece. 
+        (Clinical Residency in Periodontology and Implant Dentistry) </p>
+        <p><b>MSc Thesis project:</b> An in vitro comparative study of the effect of N2 gas and isotonic solution NaCl modification in sand-blasted and acid-etched titanium surfaces
+        (Slactive-Straumann®) to the initial adhesion, proliferation and osteoblastic differentiation of human periodontal ligament cells</p>
+      </div>
+      <div class="dotted">
+        <h6>September 1997 - October 2001</h6>
+        <p>DDS, School of Dentistry, University of Athens, Greece</p>
+      </div>
+      <div class="dotted">
+        <h6>September 1996 - July 1997</h6>
+        <p>Master of Business Administration, Business School, University of Portsmouth, England, United Kingdom</p>
+      </div>
+      <div class="dotted">
+        <h6>January 1996 - June 1996</h6>
+        <p>Postgraduate Certificate, Business School, University of Nottingham, England, United Kingdom</p>
+      </div>
+      <div class="dotted-last">
+        <h6>September 1992 - July 1995</h6>
+        <p>Bachelor of Science <b>with Honors</b>, School of Biochemistry, University of Liverpool, England, United Kingdom.</p>
+        <p><b>BSc Thesis project:</b> Novel approaches to the detection and localization of the numerous modified nucleotides in the ribosomal RNA of the yeast Saccharomyces cerevisiae.</p>
+      </div>
+      </div>
+      <h3>Academic Appointments</h3>
+      <div class="pane" style="display:none">
+        <div class="dotted-first">
+          <h6>October 2010 – June 2011</h6>
+          <p><b>Research Fellow;</b> Department of Periodontics, University Of Texas, Health Science Center at San Antonio, USA </p>
+        </div>
+        <div class="dotted">
+          <h6>September 2009 - September 2010</h6>
+          <p><b>Clinical Fellow;</b> Department of Periodontics, University Of Texas, Health Science Center at San Antonio, USA</p>
+        </div>
+        <div class="dotted-last">
+          <h6>September 2007 - June 2009</h6>
+          <p><b>Teaching Assistant;</b> Department of Periodontology, School of Dentistry, University of Athens, Greece.</p>
+        </div>
+      </div>
+      <h3>Other Employment</h3>
+      <div class="pane" style="display:none">
+        <div class="dotted-first">
+          <h6>June 2011 - Present</h6>
+          <p>Private Dental Practice limited to Periodontics and Implant Dentistry, Athens, Greece</p>
+        </div>
+        <div class="dotted">
+          <h6>August 2008 – September 2009</h6>
+          <p>Private Dental Practice limited to Periodontics and Implant Dentistry, Athens, Greece</p>
+        </div>
+        <div class="dotted">
+          <h6>July 2003-August 2005</h6>
+          <p>Private Dental Practice, Athens, Greece</p>
+        </div>
+        <div class="dotted-last">
+          <h6>January 2002 - June 2003</h6>
+          <p>Dental Clinic, Army Navy Hospital of Athens, Greece</p>
+        </div>
+      </div>
+      <h3>Honors &amp; Awards</h3>
+      <div class="pane" style="display:none">
+        <div class="dotted-first">
+          <h6>September 2007</h6>
+          <p><u><b>Honorary Certificate</b> of the European Prosthodontic Association</u> and <u><b>Prize Winner for the Best Oral presentation</u></b> (EPA 2007) entitled as: 
+          <i>Cytotoxic evaluation of a composite resin, a light cured and self bonded composite cement and a glass ionomer cement in cultures of human periodontal ligament cells.</i></p>
+        </div>
+        <div class="dotted-last">
+          <h6>October 2005</h6>
+          <p><u><b>1st Prize</b> of the best published research paper</u> to the Hellenic Dental Journal (2005, 15: 37-44), Society of Hellenic Dentistry entitled as: 
+          <i>Implant therapy in a periodontally compromised patient. The summers’ modified osteotome technique.</i> [Hellenic Dent J 2005, 15: 37-44]</p>
+        </div>
+      </div>
+      <h3>Grants &amp; Fellowships</h3>
+      <div class="pane" style="display:none">
+        <div class="dotted-first">
+          <h6>April 2010</h6>
+          <p>ITI Research Grant No. 690_2010; an Experimental Lateral Ridge Augmentation Study to Evaluate a New Membrane for Guided Bone Regeneration in Canines.<br/><br/>
+          <b>Position;</b> co-Primary Investigator<br/><br/>
+          <b>Institution;</b> The University of Texas, Health Science Center, San Antonio TX (USA), Department of Periodontics, (Chairman: Professor Dr. David L. Cochran)</p>
+        </div>
+        <div class="dotted">
+          <h6>March 2009</h6>
+          <p>ITI Clinical Fellowship.<br/><br/>
+          <b>Institution;</b> The University of Texas, Health Science Center, San Antonio TX (USA), Department of Periodontics, (Chairman: Professor Dr. David L. Cochran)</p>
+        </div>
+        <div class="dotted-last">
+          <h6>October 2005</h6>
+          <p>‘Prof. T. Koulourides’ Scholarship by Procter and Gamble Europe for basic science research at the field of Dentistry in Europe for the research project: 
+          Human periodontal ligament cell response to enamel matrix derivatives with rhBMP-7<br/><br/>
+          <b>Institution;</b> School of Dentistry, University of Athens, Greece.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<script>
+$(function() { 
+$("#accordion").tabs("#accordion div.pane", {tabs: 'h3', effect: 'slide', slideInSpeed: 500, slideOutSpeed: 500, initialIndex: null});
+});
+</script>

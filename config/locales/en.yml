@@ -12,7 +12,7 @@ en:
       meetthedoc: "Meet the Doctor"
       periodisease: "Periodontal Disease"
       implants: "Osseointegrated Implants"
-      publications: "Scientific Publications"
+      research: "Scientific Research"
       faq: "FAQ"
       contact: "Contact"
       links: "Links"
@@ -38,6 +38,9 @@ en:
       postal: "Postal Code: 106 76 "
       telephones: "Telephones"
       fax: "Fax"
+    research:
+      title: "Scientific Research"
+      description: "Scientific activity & selected publications in medical books & journals"
 #END:pages
 #START:Page Titles         
   home_title: "Home Page"   
@@ -48,6 +51,7 @@ en:
   link_title: "Links"
   faq_title: "Frequently Asked Questions"
   pub_title: "Scientific Publications"
+  research_title: "Scientific Research"
 #END:Page Titles 
 #START:Perio Articles
   periodontology_articles:

@@ -17,6 +17,7 @@ article-32.png: article-32-3b7de6fc49ddbfe1b388b7ed635cbb94.png
 article.png: article-4e6a77f52af456a164bbf727a1dfe74c.png
 articles/article1-1.jpg: articles/article1-1-af6b150b6b578f67f00002cb1ca883b5.jpg
 articles/article1-2.jpg: articles/article1-2-f6cd84be2a074f5b068b4b99f8611d85.jpg
+author-32.png: author-32-93a1f93d1339be71233190c094bcc1d0.png
 bg_body.gif: bg_body-034c255df662ec69f5b10891af64bcba.gif
 bg_body.png: bg_body-a962ff539eb437b6682332ba76772a91.png
 bg_content.png: bg_content-dc1ae3f89a0615817228f8584aee6871.png
@@ -35,6 +36,7 @@ h2_trigger_a.png: h2_trigger_a-a30e67191380dc5edc411c9064c54807.png
 header.png: header-71c4989b6bf3ea2bcadff0112275d1f1.png
 home.png: home-d3836971c5f87783b4b099926ceb9dbe.png
 list-item.png: list-item-f0b0af65f8e6916a8f34afbd6877d22e.png
+microscope.png: microscope-329ea7fb3d1bfbabab9b786ff0412b29.png
 pdf-icon.gif: pdf-icon-46cbbccace3572223d71a57910d96709.gif
 pdf-icon.png: pdf-icon-ebcc7e171eff9ad62a77b38b41dbfb08.png
 phone-icon.png: phone-icon-013823cb9b4408e98ab77e4797e2a33a.png
@@ -90,7 +92,7 @@ white.png: white-05dd79806ba8d1754ce95f23b6a12968.png
 active_admin.js: active_admin-7bdf716ead18bcaa1aac9bfb07bd90a7.js
 application.js: application-7076b20cf0684621c34f8fb677a60e21.js
 active_admin.css: active_admin-025f3f7bc5cd5910f77890051542bfcb.css
-application.css: application-b174f422cbeace3a45e95bed01c356f2.css
+application.css: application-3b85c8ab8b64e8895d36957f56d57223.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-c4711ac0d8d6af0c04142514869ec912.png
 active_admin/datepicker/datepicker-header-bg.png: active_admin/datepicker/datepicker-header-bg-8b300fd5101bf07bb3de5ce85881d989.png
 active_admin/datepicker/datepicker-input-icon.png: active_admin/datepicker/datepicker-input-icon-c88c96bf16723a09a3bc25eb3dfe8b0e.png
