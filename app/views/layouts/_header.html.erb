@@ -3,17 +3,15 @@
     <div class="grid_2">
       <%= link_to(image_tag('dentist-logo.png', :id => "logo"), root_path) %>
     </div>
-    <div class="grid_10" id="header-left">
-      <h2 id="name"><%= t('.name') %></h2>
-      <h2 id="details1">BSC DDS MBA MSC PHD<br><%= t('.details1') %></h2>
+    <div class="grid_12" id="header-left">
+      <h1 id="name"><%= t('.name') %> BSc DDS MBA MSc PhD, <%= t('.profession') %></h1>
+      <h2 id="details1"><%= t('.details1') %></h2>
       <h2 id="details2"><%= t('.details2') %></h2>
     </div>
-    <div id ="site_heading-rh" class="grid_4" >
-      <div id="site-heading-rh-top">
-        <%= link_to(image_tag('greek.png', :class => "lang"), "/gr") %>
-        <%= link_to(image_tag('english.png', :class => "lang"), "/en") %>
-      </div>
-      <div class="clear"></div>
+    <div class="grid_2" >
+      <%= link_to(image_tag('greek.png', :class => "lang"), "/gr") %>
+      <%= link_to(image_tag('english.png', :class => "lang"), "/en") %>
     </div>
+    <div class="clear"></div>
   </div>
 </div>

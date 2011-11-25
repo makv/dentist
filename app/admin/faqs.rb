@@ -1,5 +1,5 @@
 ActiveAdmin.register Faq do
-  
+  menu false
   filter :locale, :label => "Language", :as => :select, :collection => ["gr", "en"]
   
   index do

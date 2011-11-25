@@ -8,15 +8,16 @@ gr:
     application:
       name: "Δρ. Αναστάσιος Μάμαλης"
     header:
-      name: "Δρ. Αναστάσιος Μάμαλης"     
-      details1: "Περιοδοντολόγος - Βιοχημικός"
-      details2: "Επιστημονικός Συνεργάτης Οδοντιατρικής Σχολής Αθηνών"
+      name: "Δρ. Αναστάσιος Μάμαλης"
+      profession: "Περιοδοντολόγος - Βιοχημικός"
+      details1: "Επιστημονικός Συνεργάτης Εργαστηρίου Περιοδοντολογίας Αθηνών"
+      details2: "Κλινικός Συνεργάτης University of Texas Health Science Center, San Antonio Texas, USA"
     main-nav:
       home: "Αρχική"
       meetthedoc: "Γνωρίστε τον Γιατρό"
-      periodisease: "Περιοδοντολογική Νόσος"
-      implants: "Εμφυτεύματα"
-      research: "Επιστημονική Έρευνα"
+      periodisease: "Περιοδοντικά Νοσήματα"
+      implants: "Οστεοενσωματούμενα Εμφυτεύματα"
+      research: "Επιστημονικό Έργο"
       faq: "Ερωτήσεις"
       contact: "Επικοινωνία"
       links: "Σύνδεσμοι"

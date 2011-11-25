@@ -5,8 +5,9 @@ en:
       name: "Dr. Anastasios Mamalis"
     header:
       name: "Dr. Anastasios Mamalis"
-      details1: "Periodontologist - Biochemist"
-      details2: "Scientific Associate of University of Athens Dental School"
+      profession: "Periodontologist - Biochemist" 
+      details1: "Scientific Associate of Athens Periodontology Labs"
+      details2: "Clinical Fellow of University of Texas Health Science Center, San Antonio Texas, USA"
     main-nav:
       home: "Home"
       meetthedoc: "Meet the Doctor"
