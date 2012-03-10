@@ -26,11 +26,8 @@ ActiveAdmin.register Article do
     end
     panel("Description") do
       attributes_table_for article do
-        row "Description" do
-          article.description.html_safe
-        end
-        row "Method" do
-          article.method.html_safe
+        [:description, :method].each do |column|
+          row column
         end
         row "Image Before" do
           image_tag article.image_before.url(:thumb)

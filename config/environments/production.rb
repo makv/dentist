@@ -15,12 +15,12 @@ Dentist::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
   # active admin fix
-  config.assets.precompile += %w[active_admin.css active_admin.js tiny_mce/jquery.tinymce.js tiny_mce/tiny_mce.js]
+  config.assets.precompile += %w[active_admin.css active_admin.js]
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 

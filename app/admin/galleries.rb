@@ -14,7 +14,7 @@ ActiveAdmin.register Gallery do
     panel("Details") do
       attributes_table_for gallery do
         [:title, :description, :locale].each do |column|
-          row column.html_safe
+          row column
         end
       end
     end

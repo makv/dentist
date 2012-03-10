@@ -5,8 +5,8 @@
     <%= f.input :title %>
    <% end %>
   <%= f.inputs "Content", :id => "content" do %>
-    <%= f.input :description, :input_html => {:class => 'editor'} %>
-    <%= f.input :method, :input_html => {:class => 'editor'} %>
+    <%= f.input :description %>
+    <%= f.input :method %>
     <%= f.input :image_before, :as => :file %>
     <%= image_tag @article.image_before.url(:thumb) %>
     <%= f.input :image_after, :as => :file %>
