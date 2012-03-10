@@ -1,18 +1,16 @@
-ActiveAdmin.register Link do
-  menu false
+ActiveAdmin.register Service do
+
   filter :locale, :label => "Language", :as => :select, :collection => ["gr", "en"]
   
   index do
     column :title
-    column :url   
-    column :description   
     column :locale, :label => "Language"
     default_actions
   end
   
-  show do |link|
-    attributes_table_for link do
-        [:title, :url, :description, :locale].each do |column|
+  show do |service|
+    attributes_table_for service do
+        [:title, :locale].each do |column|
           row column
         end
       end
@@ -21,8 +19,6 @@ ActiveAdmin.register Link do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :url
-      f.input :description
       f.input :locale, :as => :select, :collection => ["gr", "en"]
     end
     f.buttons

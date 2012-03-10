@@ -1,4 +1,5 @@
 class PeriodontologyArticlesController < ApplicationController
+
   def index
     @article = PeriodontologyArticle.first
     @title = t('.perio_title')
@@ -13,5 +14,5 @@ class PeriodontologyArticlesController < ApplicationController
       render :template => 'periodontology_articles/index'
     end
   end
-
+  
 end

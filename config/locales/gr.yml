@@ -14,12 +14,13 @@ gr:
       details2: "Κλινικός Συνεργάτης University of Texas Health Science Center, San Antonio Texas, USA"
     main-nav:
       home: "Αρχική"
-      meetthedoc: "Γνωρίστε τον Γιατρό"
-      periodisease: "Περιοδοντικά Νοσήματα"
-      implants: "Οστεοενσωματούμενα Εμφυτεύματα"
+      services: "Υπηρεσίες"
+      meetthedoc: "CV"
+      periodisease: "Ούλα"
+      implants: "Εμφυτεύματα"
       research: "Επιστημονικό Έργο"
-      faq: "Ερωτήσεις"
-      contact: "Επικοινωνία"
+      faq: "Συχνές Ερωτήσεις"
+      contact: "Χάρτης"
       links: "Σύνδεσμοι"
     footer:
       address1: "ΜΑΡΑΣΛΗ 1 & ΒΑΣΙΛΙΣΣΗΣ ΣΟΦΙΑΣ"
@@ -96,3 +97,9 @@ gr:
         title: "Επιστημονικές Δημοσιεύσεις"
         description: "Δείτε την λίστα με τις Επιστημονικές Δημοσιεύσεις του Γιατρού"
 #END:Publications
+#START:Services
+  services:
+      header:
+        title: "Υπηρεσίες"
+        description: "Η λίστα των προσφερόμενων υπηρεσιών προς ασθενείς"
+#END:Services

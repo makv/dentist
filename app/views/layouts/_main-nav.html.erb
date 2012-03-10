@@ -1,13 +1,13 @@
 <div id="main-nav">
     <div class="container_16">
-    <ul id="nav-menu">
-        <li><%= link_to t('.home'), root_path %></li>
-        <li><%= link_to t('.meetthedoc'), bio_path %></li>
-        <li><%= link_to t('.periodisease'), periodontology_articles_path %></li>
-        <li><%= link_to t('.implants'), implants_articles_path %></li>
-        <li><%= link_to t('.research'), research_path, :class => "sf-with-ul" %></li>
-        <li><%= link_to t('.contact'), contact_path %></li>
-        <li><%= link_to t('.links'), links_path %></li>
-    </ul>
+        <ul id="nav-menu">
+            <li><%= link_to(image_tag('address-icon.png'), root_path) %></li>
+            <li><%= link_to t('.services'), services_path %></li>
+            <li><%= link_to t('.meetthedoc'), bio_path %></li>
+            <li><%= link_to t('.periodisease'), periodontology_articles_path %></li>
+            <li><%= link_to t('.implants'), implants_articles_path %></li>
+            <li><%= link_to t('.contact'), contact_path %></li>
+        </ul>
     </div>
 </div>
+    

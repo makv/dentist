@@ -10,12 +10,13 @@ en:
       details2: "Clinical Fellow of University of Texas Health Science Center, San Antonio Texas, USA"
     main-nav:
       home: "Home"
-      meetthedoc: "Meet the Doctor"
-      periodisease: "Periodontal Disease"
-      implants: "Osseointegrated Implants"
+      services: "Services"
+      meetthedoc: "CV"
+      periodisease: "Gums"
+      implants: "Implants"
       research: "Scientific Research"
       faq: "FAQ"
-      contact: "Contact"
+      contact: "Map"
       links: "Links"
     footer:
       address1: "Marasli 1 & Vasilisis Sofias"
@@ -53,6 +54,7 @@ en:
   faq_title: "Frequently Asked Questions"
   pub_title: "Scientific Publications"
   research_title: "Scientific Research"
+  services_title: "Procedures"
 #END:Page Titles 
 #START:Perio Articles
   periodontology_articles:
@@ -92,3 +94,9 @@ en:
         title: "Scientific Publications"
         description: "Download and view Scientific Publications by the Doctor"
 #END:Publications
+#START:Services
+  services:
+      header:
+        title: "Procedures"
+        description: "The list of offered procedures to patients"
+#END:Services

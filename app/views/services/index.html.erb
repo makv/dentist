@@ -1,0 +1,12 @@
+<%= render 'header' %>
+<div class="container_16">
+	<div id = "first-paragraph" class="grid_16">
+		<ul class="link-list">
+			<% Service.find_all_by_locale(I18n.locale).each do |service| %>
+			<li>
+  			<%= link_to(service.title, '#', :title => '', :class => "links") %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+</div>
