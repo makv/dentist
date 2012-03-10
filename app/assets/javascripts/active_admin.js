@@ -1,3 +1,4 @@
 //= require active_admin/base
 //= require active_admin_custom
-//= require_tree ./tiny_mce/
+//= require tiny_mce/jquery.tinymce
+//= require tiny_mce/tiny_mce
