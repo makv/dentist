@@ -93,6 +93,7 @@ active_admin.js: active_admin-0eb78fe0c55d59db590629ec601aa7ab.js
 active_admin_custom.js: active_admin_custom-c604183d3cb3abc11f4c4042cc0a1b02.js
 application.js: application-233bce89823f3221c767784d860c6cc7.js
 tiny_mce/jquery.tinymce.js: tiny_mce/jquery.tinymce-cd0ca0cb9623bed7b2bf25b2bbe6e829.js
+tiny_mce/langs/en.js: tiny_mce/langs/en-8106c62fcb1e3a991503eaf294278c4c.js
 tiny_mce/license.txt: tiny_mce/license-cb7bf897fd668441e5006933252d10e3.txt
 tiny_mce/plugins/advhr/rule.htm: tiny_mce/plugins/advhr/rule-4e06abf856ebfa0488ec40900076dfa9.htm
 tiny_mce/plugins/advimage/image.htm: tiny_mce/plugins/advimage/image-88dadcc65eafeec6d71af4ffdb4e1700.htm
@@ -176,6 +177,7 @@ tiny_mce/themes/advanced/skins/o2k7/img/button_bg.png: tiny_mce/themes/advanced/
 tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png: tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black-8f4cc7507add21ed59d9c4b7f3e1f6a9.png
 tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png: tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver-f169eba2cad58160131bf2acc3753b24.png
 tiny_mce/themes/advanced/source_editor.htm: tiny_mce/themes/advanced/source_editor-b628fad827bd1ae767bb8f3b872c9524.htm
+tiny_mce/themes/simple/editor_template.js: tiny_mce/themes/simple/editor_template-75627bc2d32c2e88c44140abe38941f6.js
 tiny_mce/themes/simple/img/icons.gif: tiny_mce/themes/simple/img/icons-2275101df963a2b55e91e561b82b16de.gif
 tiny_mce/themes/simple/skins/o2k7/img/button_bg.png: tiny_mce/themes/simple/skins/o2k7/img/button_bg-32d43e726bc23d9b0c0dde41894b4704.png
 tiny_mce/tiny_mce.js: tiny_mce/tiny_mce-18822c5555ea044056f866f9a236bffd.js
