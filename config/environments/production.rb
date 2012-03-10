@@ -20,9 +20,7 @@ Dentist::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
   # active admin fix
-  config.assets.precompile += %w[active_admin.css active_admin.js active_admin_custom.js 
-    tiny_mce/tiny_mce.js tiny_mce/jquery.tinymce.js 
-    tiny_mce/themes/simple/editor_template.js tiny_mce/langs/en.js]
+  config.assets.precompile += %w[active_admin.css active_admin.js active_admin_custom.js]
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
   # heroku fix
