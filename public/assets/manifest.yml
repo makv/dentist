@@ -93,7 +93,7 @@ active_admin.js: active_admin-7bdf716ead18bcaa1aac9bfb07bd90a7.js
 active_admin_custom.js: active_admin_custom-d6d56fb6f85203211b86e45f96851d46.js
 application.js: application-7076b20cf0684621c34f8fb677a60e21.js
 tiny_mce/jquery.tinymce.js: jquery.tinymce-e6c9af458c918b8b2e30362680449e98.js
-tiny_mce/jquery.tiny_mce.js: tiny_mce-4bb70babd294873dc22cb4528bed5c97.js
+tiny_mce/tiny_mce.js: tiny_mce-4bb70babd294873dc22cb4528bed5c97.js
 tiny_mce/license.txt: tiny_mce/license-1e6d1bcac160391dd7818ca2314365c7.txt
 tiny_mce/plugins/advhr/rule.htm: tiny_mce/plugins/advhr/rule-88002512b91a9a1286a851add29b1dc3.htm
 tiny_mce/plugins/advimage/image.htm: tiny_mce/plugins/advimage/image-51dcac39bd0e7970f2b3d20b9754e623.htm
