@@ -91,8 +91,7 @@ web3.png: web3-3878897c162db9748a25bb9d9e5290fa.png
 white.png: white-05dd79806ba8d1754ce95f23b6a12968.png
 active_admin.js: active_admin-c0799c2e3aa1327cb81f1dc9a6662e79.js
 application.js: application-7076b20cf0684621c34f8fb677a60e21.js
-jquery.tinymce.js: jquery.tinymce-e6c9af458c918b8b2e30362680449e98.js
-tiny_mce.js: tiny_mce-4bb70babd294873dc22cb4528bed5c97.js
+tiny_mce/jquery.tinymce.js: tiny_mce/jquery.tinymce-e6c9af458c918b8b2e30362680449e98.js
 tiny_mce/license.txt: tiny_mce/license-1e6d1bcac160391dd7818ca2314365c7.txt
 tiny_mce/plugins/advhr/rule.htm: tiny_mce/plugins/advhr/rule-88002512b91a9a1286a851add29b1dc3.htm
 tiny_mce/plugins/advimage/image.htm: tiny_mce/plugins/advimage/image-51dcac39bd0e7970f2b3d20b9754e623.htm
@@ -179,6 +178,7 @@ tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png: tiny_mce/themes/ad
 tiny_mce/themes/advanced/source_editor.htm: tiny_mce/themes/advanced/source_editor-ac5d0681216384014e35b75a9852b10f.htm
 tiny_mce/themes/simple/img/icons.gif: tiny_mce/themes/simple/img/icons-c34888c7029596eaa3453cc63ca2fd0e.gif
 tiny_mce/themes/simple/skins/o2k7/img/button_bg.png: tiny_mce/themes/simple/skins/o2k7/img/button_bg-972b91923882328c8ed2563882d29d42.png
+tiny_mce/tiny_mce.js: tiny_mce/tiny_mce-4bb70babd294873dc22cb4528bed5c97.js
 active_admin.css: active_admin-025f3f7bc5cd5910f77890051542bfcb.css
 application.css: application-dc59b721393c952e104120dd50f80738.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-c4711ac0d8d6af0c04142514869ec912.png
