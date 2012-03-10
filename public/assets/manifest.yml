@@ -91,6 +91,8 @@ web3.png: web3-3878897c162db9748a25bb9d9e5290fa.png
 white.png: white-05dd79806ba8d1754ce95f23b6a12968.png
 active_admin.js: active_admin-c0799c2e3aa1327cb81f1dc9a6662e79.js
 application.js: application-7076b20cf0684621c34f8fb677a60e21.js
+jquery.tinymce.js: jquery.tinymce-e6c9af458c918b8b2e30362680449e98.js
+tiny_mce.js: tiny_mce-4bb70babd294873dc22cb4528bed5c97.js
 tiny_mce/license.txt: tiny_mce/license-1e6d1bcac160391dd7818ca2314365c7.txt
 tiny_mce/plugins/advhr/rule.htm: tiny_mce/plugins/advhr/rule-88002512b91a9a1286a851add29b1dc3.htm
 tiny_mce/plugins/advimage/image.htm: tiny_mce/plugins/advimage/image-51dcac39bd0e7970f2b3d20b9754e623.htm
