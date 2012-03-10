@@ -89,7 +89,8 @@ web1.png: web1-90a301b7e241f5d3a305a6fc8ee9c762.png
 web2.png: web2-b26fe84a423eec46426e2c8b85625b0b.png
 web3.png: web3-3878897c162db9748a25bb9d9e5290fa.png
 white.png: white-05dd79806ba8d1754ce95f23b6a12968.png
-active_admin.js: active_admin-c0799c2e3aa1327cb81f1dc9a6662e79.js
+active_admin.js: active_admin-c900b0dcfe460d94cb056a055c1ef74c.js
+active_admin_custom.js: active_admin_custom-d6d56fb6f85203211b86e45f96851d46.js
 application.js: application-7076b20cf0684621c34f8fb677a60e21.js
 tiny_mce/jquery.tinymce.js: tiny_mce/jquery.tinymce-e6c9af458c918b8b2e30362680449e98.js
 tiny_mce/license.txt: tiny_mce/license-1e6d1bcac160391dd7818ca2314365c7.txt
