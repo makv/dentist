@@ -1,4 +1,4 @@
-	---
+---
 comfortaa-regular-webfont.eot: comfortaa-regular-webfont-58509ba3e48a25ec8db796d4c9f0f705.eot
 comfortaa-regular-webfont.svg: comfortaa-regular-webfont-533627e6ea1fb621922966e3408a0f37.svg
 comfortaa-regular-webfont.ttf: comfortaa-regular-webfont-51d94f88ec10448f0eef93d045d7171c.ttf
@@ -89,11 +89,7 @@ web1.png: web1-90a301b7e241f5d3a305a6fc8ee9c762.png
 web2.png: web2-b26fe84a423eec46426e2c8b85625b0b.png
 web3.png: web3-3878897c162db9748a25bb9d9e5290fa.png
 white.png: white-05dd79806ba8d1754ce95f23b6a12968.png
-active_admin.js: active_admin-7bdf716ead18bcaa1aac9bfb07bd90a7.js
-active_admin_custom.js: active_admin_custom-d6d56fb6f85203211b86e45f96851d46.js
 application.js: application-7076b20cf0684621c34f8fb677a60e21.js
-tiny_mce/jquery.tinymce.js: jquery.tinymce-e6c9af458c918b8b2e30362680449e98.js
-tiny_mce/tiny_mce.js: tiny_mce-4bb70babd294873dc22cb4528bed5c97.js
 tiny_mce/license.txt: tiny_mce/license-1e6d1bcac160391dd7818ca2314365c7.txt
 tiny_mce/plugins/advhr/rule.htm: tiny_mce/plugins/advhr/rule-88002512b91a9a1286a851add29b1dc3.htm
 tiny_mce/plugins/advimage/image.htm: tiny_mce/plugins/advimage/image-51dcac39bd0e7970f2b3d20b9754e623.htm
@@ -180,7 +176,6 @@ tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png: tiny_mce/themes/ad
 tiny_mce/themes/advanced/source_editor.htm: tiny_mce/themes/advanced/source_editor-ac5d0681216384014e35b75a9852b10f.htm
 tiny_mce/themes/simple/img/icons.gif: tiny_mce/themes/simple/img/icons-c34888c7029596eaa3453cc63ca2fd0e.gif
 tiny_mce/themes/simple/skins/o2k7/img/button_bg.png: tiny_mce/themes/simple/skins/o2k7/img/button_bg-972b91923882328c8ed2563882d29d42.png
-active_admin.css: active_admin-025f3f7bc5cd5910f77890051542bfcb.css
 application.css: application-dc59b721393c952e104120dd50f80738.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-c4711ac0d8d6af0c04142514869ec912.png
 active_admin/datepicker/datepicker-header-bg.png: active_admin/datepicker/datepicker-header-bg-8b300fd5101bf07bb3de5ce85881d989.png
