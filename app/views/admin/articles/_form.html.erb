@@ -5,12 +5,10 @@
     <%= f.input :title %>
    <% end %>
   <%= f.inputs "Content", :id => "content" do %>
-    <%= f.input :description, :input_html => {:class => 'editor'} %>
-    <%= f.input :method, :input_html => {:class => 'editor'} %>
-    <%= f.input :image_before, :as => :file %>
-    <%= image_tag @article.image_before.url(:thumb) %>
-    <%= f.input :image_after, :as => :file %>
-    <%= image_tag @article.image_after.url(:thumb) %>
+    <%= f.has_many :article_sections do |fs| %>
+      <%= fs.input :title %>
+      <%= fs.input :content, :input_html => {:class => 'editor'} %>
+    <% end %>
   <% end %>
   <%= f.buttons :commit %> 
 <% end %>

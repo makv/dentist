@@ -24,24 +24,31 @@ ActiveAdmin.register Article do
         end
       end
     end
-    panel("Description") do
-      attributes_table_for article do
-        row "Description" do
-          article.description.html_safe
-        end
-        row "Method" do
-          article.method.html_safe
-        end
-        row "Image Before" do
-          image_tag article.image_before.url(:thumb)
-        end
-        row "Image After" do
-          image_tag article.image_after.url(:thumb)
-        end
+    panel("Sections") do
+      table_for article.article_sections do
+        column :position
+        column :title
+        column :content
       end
     end
   end
   
-  form :partial => "form"
+  form do |f|
+    f.inputs do
+      f.input :title, :input_html => {:class => 'editor'}
+      f.input :locale, :as => :select, :collection => ["en", "gr"]
+    end
+    f.inputs "Sections" do
+      f.has_many :article_sections do |j|
+        if !j.object.id.nil?
+          j.input :_destroy, :as => :boolean, :label => "Delete"
+        end
+        j.inputs :position
+        j.inputs :title
+        j.inputs :content, :input_html => {:class => 'editor'}
+      end
+    end
+    f.buttons
+  end
   
 end

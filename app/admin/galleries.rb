@@ -41,13 +41,12 @@ ActiveAdmin.register Gallery do
           j.input :_destroy, :as => :boolean, :label => "Delete"
         end
         j.form_buffers.last << "<fieldset><ol><li><label>Preview</label><img src='#{j.object.image.url(:thumb) rescue nil}' style='float:left;margin:1em;' /></li></ol></fieldset>".html_safe
-        j.inputs :caption
+        j.inputs :caption, :input_html => {:class => 'editor'}
         j.inputs :position
         j.inputs :image, :as => :file
 
       end
     end
-
     f.buttons
   end
 

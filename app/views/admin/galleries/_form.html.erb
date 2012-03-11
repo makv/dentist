@@ -5,7 +5,7 @@
     <%= f.input :locale %>
    <% end %>
   <%= f.inputs "Content", :id => "content" do %>
-    <% f.has_many :photos do |pf| %>
+    <%= f.has_many :photos do |pf| %>
       <%= pf.input :caption %> 
       <%= pf.input :image, :as => :file %>  
     <% end %>
