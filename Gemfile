@@ -6,7 +6,7 @@ gem 'rails', '3.1.1'
 gem 'thin'
 gem "meta_search",    '>= 1.1.0.pre'
 gem 'sass-rails', "~> 3.1.5"
-gem 'activeadmin', '0.3.2' #:git => 'https://github.com/gregbell/active_admin.git'
+gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
 gem 'acts_as_list'
 gem "rake", "0.9.2"
 gem "paperclip", "~> 2.4.4"
