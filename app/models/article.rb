@@ -22,6 +22,8 @@
 
 class Article < ActiveRecord::Base
 
+  has_many :article_sections, :order => "position"
+  accepts_nested_attributes_for :article_sections, :allow_destroy => true
   before_create :set_helper_fields
   after_save:rearrange_ids_globally
   after_destroy :rearrange_ids

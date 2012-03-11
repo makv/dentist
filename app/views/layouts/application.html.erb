@@ -10,7 +10,7 @@
     <div id="wrapper">
       <div id="main" class="clearfix">
         <%= render 'layouts/header' %>
-        <%= render 'layouts/main-nav' %>
+        <%= render "layouts/main-nav_#{params[:locale]}" %>
         <%= yield %>
       </div>
   </div>
