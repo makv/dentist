@@ -53,8 +53,7 @@ class Article < ActiveRecord::Base
   validates :locale, :presence => true
   validates :type, :presence => true
   validates :title, :presence => true
-  validates :description, :presence => true
-  validates :method, :presence => true
+
   attr_accessible :type
   attr_accessible :locale
   attr_accessible :title
@@ -62,6 +61,7 @@ class Article < ActiveRecord::Base
   attr_accessible :method
   attr_accessible :image_before
   attr_accessible :image_after
+  attr_accessible :article_sections_attributes
   
 def self.inherited(child)
   child.instance_eval do

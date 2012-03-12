@@ -1,1 +1,0 @@
-function load_editors(){$(".editor").tinymce({})}$(document).ready(function(){load_editors()});

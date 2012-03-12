@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: article_sections
+#
+#  id         :integer         not null, primary key
+#  title      :string(255)
+#  content    :text(255)
+#  article_id :integer
+#  position   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'spec_helper'
 
 describe ArticleSection do
