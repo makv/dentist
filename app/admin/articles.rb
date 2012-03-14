@@ -8,27 +8,35 @@ ActiveAdmin.register Article do
   filter :locale, :as => :select, :collection => ["gr", "en"]
   filter :title
     
-  index do
+  index do |i|
     column :article_id
-    column :type      
+    column :type
     column :locale, :label => "Language"
-    column :title
+    column "Title" do |article|
+      article.title.html_safe 
+    end
     default_actions
   end
   
   show do |article|
     panel("Details") do
       attributes_table_for article do
-        [:article_id, :locale, :type, :title].each do |column|
+        row "Title" do
+          article.title.html_safe
+        end
+        [:article_id, :locale, :type].each do |column|
           row column
         end
       end
     end
     panel("Sections") do
       table_for article.article_sections do
-        column :position
-        column :title
-        column :content
+        column "Title" do |section|
+          section.title.html_safe
+        end
+        column "Content" do |section|
+          section.content.html_safe
+        end
       end
     end
   end
