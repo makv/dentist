@@ -43,7 +43,7 @@ ActiveAdmin.register Article do
   
   form do |f|
     f.inputs do
-      f.input :title, :input_html => {:class => 'editor'}
+      f.input :title
       f.input :type, :as => :select, :collection => Article.select_options
       f.input :locale, :as => :select, :collection => ["en", "gr"]
     end
