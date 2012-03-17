@@ -3,7 +3,9 @@
     <div class="accordion">
       <% @article.article_sections.each do |section| %>
         <% if !(section.position.modulo(2) == i-1)  %>
-          <h2 class="acc_trigger"><a href="#"><%= section.title.html_safe %></a></h2>
+          <h2 class="acc_trigger">
+            <a href="#"><%= section.title.html_safe %></a>
+          </h2>
           <div class="acc_container block">
             <%= section.content.html_safe %>
           </div>

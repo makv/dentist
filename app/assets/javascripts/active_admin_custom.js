@@ -20,7 +20,7 @@ function load_editors(){
 }
 
 $("textarea").live("mouseover", function(){ 
-  $('textarea').tinymce({
+  $('textarea:last').tinymce({
 	theme : "advanced",
 	plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
 
