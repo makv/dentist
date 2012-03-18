@@ -1,13 +1,24 @@
 <div id="main-nav">
     <div class="container_16">
         <ul id="nav-menu">
-            <li><%= link_to(image_tag('home-icon.png'), root_path) %></li>
-            <li><%= link_to t('.services'), services_path %></li>
-            <li><%= link_to t('.meetthedoc'), bio_path %></li>
-            <li><%= link_to t('.periodisease'), periodontology_articles_path %></li>
-            <li><%= link_to t('.implants'), implants_articles_path %></li>
-            <li><%= link_to t('.contact'), contact_path %></li>
+            <li>
+                <%= link_to(image_tag('home-icon.png'), root_path) %>
+            </li>
+            <li>
+                <%= link_to t('services').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, services_path %>
+            </li>
+            <li>
+                <%= link_to t('meetthedoc').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, bio_path %>
+            </li>
+            <li>
+                <%= link_to t('periodisease').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, periodontology_articles_path %>
+            </li>
+            <li>
+                <%= link_to t('implants').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, implants_articles_path %>
+            </li>
+            <li>
+                <%= link_to t('contact').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, contact_path %>
+            </li>
         </ul>
     </div>
 </div>
-    

@@ -16,6 +16,7 @@ function load_editors(){
 	theme_advanced_toolbar_align : "left",
 	theme_advanced_statusbar_location : "bottom",
 	theme_advanced_resizing : true
+	force_p_newlines : false
   });
 }
 
@@ -33,5 +34,6 @@ $("textarea").live("mouseover", function(){
 	theme_advanced_toolbar_align : "left",
 	theme_advanced_statusbar_location : "bottom",
 	theme_advanced_resizing : true
+	force_p_newlines : false
   });
  });
