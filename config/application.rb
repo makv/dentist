@@ -50,5 +50,6 @@ module Dentist
     config.i18n.default_locale = :gr
     #Adding the below makes it work as expected at heroku
     config.i18n.locale = :gr
+
   end
 end
