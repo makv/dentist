@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'thin'
@@ -26,10 +27,8 @@ end
 # Deploy with Capistrano
 # gem 'capistrano'
 group :production do
-  gem 'pg'
 end
 group :development do
-  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'execjs'
   gem 'therubyracer'

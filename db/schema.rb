@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20120317160808) do
 
   create_table "article_sections", :force => true do |t|
     t.string   "title"
-    t.text     "content",    :limit => 255
+    t.text     "content"
     t.integer  "article_id"
     t.integer  "position"
     t.datetime "created_at"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(:version => 20120317160808) do
     t.integer  "article_id"
     t.string   "locale"
     t.string   "title"
-    t.text     "description",               :limit => 1024
-    t.text     "method",                    :limit => 1024
+    t.string   "description"
+    t.string   "method"
     t.string   "image_before_file_name"
     t.string   "image_after_file_name"
     t.string   "permalink"
@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(:version => 20120317160808) do
   end
 
   create_table "faqs", :force => true do |t|
-    t.text     "question",   :limit => 255
-    t.text     "answer",     :limit => 255
+    t.text     "question"
+    t.text     "answer"
     t.string   "locale"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -89,6 +89,19 @@ ActiveRecord::Schema.define(:version => 20120317160808) do
     t.datetime "updated_at"
   end
 
+  create_table "implants_articles", :force => true do |t|
+    t.integer  "article_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "description"
+    t.string   "method"
+    t.string   "image_before_url"
+    t.string   "image_after_url"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "links", :force => true do |t|
     t.integer  "link_id"
     t.string   "title"
@@ -98,6 +111,21 @@ ActiveRecord::Schema.define(:version => 20120317160808) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "periodontology_articles", :force => true do |t|
+    t.integer  "article_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "description"
+    t.string   "method"
+    t.string   "image_before_url"
+    t.string   "image_after_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "permalink"
+  end
+
+  add_index "periodontology_articles", ["locale"], :name => "index_periodontology_articles_on_locale"
 
   create_table "photos", :force => true do |t|
     t.string   "caption"
