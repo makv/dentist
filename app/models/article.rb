@@ -95,15 +95,15 @@ end
     def rearrange_ids_globally
       locales = ["gr", "en"]
       sub_classes = Article.select_options
-        for l in locales         
-          for c in sub_classes
-            i=1 
-            Article.find_all_by_locale_and_type(l, c).each do |article|
-              article.update_column(:article_id, i)
-              i +=1
-            end
+      for l in locales         
+        for c in sub_classes
+          i=1 
+          Article.find_all_by_locale_and_type(l, c).each do |article|
+            article.update_column(:article_id, i)
+            i +=1
           end
         end
+      end
     end
             
     
