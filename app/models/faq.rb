@@ -3,8 +3,8 @@
 # Table name: faqs
 #
 #  id         :integer         not null, primary key
-#  question   :text(255)
-#  answer     :text(255)
+#  question   :text
+#  answer     :text
 #  locale     :string(255)
 #  created_at :datetime
 #  updated_at :datetime

@@ -5,19 +5,19 @@
                 <%= link_to(image_tag('home-icon.png'), root_path) %>
             </li>
             <li>
-                <%= link_to t('services').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, services_path %>
+                <%= link_to thtml('nav_services'), services_path %>
             </li>
             <li>
-                <%= link_to t('meetthedoc').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, bio_path %>
+                <%= link_to thtml('nav_meetthedoc'), bio_path %>
             </li>
             <li>
-                <%= link_to t('periodisease').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, periodontology_articles_path %>
+                <%= link_to thtml('nav_periodisease'), periodontology_articles_path %>
             </li>
             <li>
-                <%= link_to t('implants').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, implants_articles_path %>
+                <%= link_to thtml('nav_implants'), implants_articles_path %>
             </li>
             <li>
-                <%= link_to t('contact').gsub(/^<p>(.*)<\/p>/, '\\1').html_safe, contact_path %>
+                <%= link_to thtml('nav_contact'), contact_path %>
             </li>
         </ul>
     </div>

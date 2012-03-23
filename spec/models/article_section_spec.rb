@@ -4,7 +4,7 @@
 #
 #  id         :integer         not null, primary key
 #  title      :string(255)
-#  content    :text(255)
+#  content    :text
 #  article_id :integer
 #  position   :integer
 #  created_at :datetime

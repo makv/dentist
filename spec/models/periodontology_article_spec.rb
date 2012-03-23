@@ -6,8 +6,8 @@
 #  article_id                :integer
 #  locale                    :string(255)
 #  title                     :string(255)
-#  description               :text(1024)
-#  method                    :text(1024)
+#  description               :string(255)
+#  method                    :string(255)
 #  image_before_file_name    :string(255)
 #  image_after_file_name     :string(255)
 #  permalink                 :string(255)
