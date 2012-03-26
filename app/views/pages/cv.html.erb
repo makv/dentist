@@ -4,15 +4,7 @@
   <div class="container_16">
     <div id="ajaxloader" class="grid_2 prefix_7 suffix_7 alpha omega"><%= image_tag('ajax-loader.gif') %></div>
     <div class="panes">
-    <% PeriodontologyArticle.find_all_by_locale(I18n.locale).each do |article| %>
-    <% if article.permalink == @article.permalink %>
-      <div class="grid_16 alpha omega article-section">
-        <%= render :template => 'periodontology_articles/show' %>
-      </div>
-    <% else %>
-      <div class="grid_16 alpha omega article-section"></div>
-    <% end%>
-        <% end %>
+
     </div>
   </div>
 </div>
