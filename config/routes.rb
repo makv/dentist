@@ -14,7 +14,7 @@ Dentist::Application.routes.draw do
     #resources :links
     #resources :faqs
     match '/contact', :to => 'pages#contact'
-    match '/bio', :to => 'pages#bio'
+    match '/bio', :to => 'pages#cv'
     match '/research', :to => 'pages#research'
     root :to => 'pages#home'
 

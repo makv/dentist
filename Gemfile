@@ -27,6 +27,7 @@ end
 # Deploy with Capistrano
 # gem 'capistrano'
 group :production do
+  gem 'dalli'
 end
 group :development do
   gem 'rspec-rails'

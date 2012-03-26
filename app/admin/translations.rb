@@ -5,7 +5,9 @@ ActiveAdmin.register Translation do
   index do
     column :key  
     column :locale
-    column :value
+    column "Value" do |t|
+      t.value.html_safe
+    end
     default_actions
   end
   
@@ -13,6 +15,9 @@ ActiveAdmin.register Translation do
     attributes_table_for tr do
       [:key, :locale, :value].each do |column|
         row column
+      end
+      row "Value" do |t|
+        t.value.html_safe
       end
     end
   end
