@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     @title = t('.contact_title');
   end
   
-  def bio
+  def cv
     @title = t('.bio_title');
   end
 
