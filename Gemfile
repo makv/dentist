@@ -1,17 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails'
 gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'thin'
-gem "meta_search",    '>= 1.1.0.pre'
-gem 'sass-rails', "~> 3.1.5"
-gem 'activeadmin', '0.4.1'  #0.4.2 breaks the asset pipeline
+gem 'meta_search'
+gem 'sass-rails'
+gem 'activeadmin'
 gem 'acts_as_list'
-gem "rake", "0.9.2"
+gem 'rake'
 gem 'jquery-rails'
-gem "paperclip", "~> 2.4.4"
+gem 'paperclip'
 gem 'aws-s3'
 gem 'tinymce-rails'
 gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git', :require => 'i18n/active_record'
@@ -19,7 +19,7 @@ gem 'taps'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'coffee-rails'
   gem 'uglifier'
 end
 # Use unicorn as the web server
@@ -34,6 +34,7 @@ group :development do
   gem 'therubyracer'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'annotate'
+  gem 'heroku'
 end
 group :test do
   gem 'rspec-rails'
