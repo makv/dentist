@@ -251,6 +251,8 @@ DEPENDENCIES
   rspec-rails
   ruby-debug19
   sass-rails
+  sqlite3
+  sqlite3-ruby
   taps
   therubyracer
   thin
