@@ -1,16 +1,16 @@
 ActiveAdmin.register Publication do
   menu false
-  filter :locale, :label => "Language", :as => :select, :collection => ["gr", "en"]
-  
+  filter :locale, :label => "Language", :as => :select, :collection => LOCALES
+
   index do
-    column :title  
+    column :title
     column :description
-    column :pub_date   
+    column :pub_date
     column :locale, :label => "Language"
     column :pub_pdf_file_name
     default_actions
   end
-  
+
   show do |pub|
     attributes_table_for pub do
       [:title, :description, :pub_date, :locale].each do |column|
@@ -21,13 +21,13 @@ ActiveAdmin.register Publication do
       end
     end
   end
-    
+
   form do |f|
     f.inputs do
       f.input :title
       f.input :description
       f.input :pub_date
-      f.input :locale, :as => :select, :collection => ["gr", "en"]
+      f.input :locale, :as => :select, :collection => LOCALES
     end
     f.inputs "Pdf File" do
       f.form_buffers.last << "<fieldset><ol><li><label>Current file</label><a href='#{f.object.pub_pdf.url rescue nil}' style='float:left'>#{f.object.pub_pdf_file_name}</a></li></ol></fieldset>".html_safe

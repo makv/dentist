@@ -4,7 +4,7 @@ class PeriodontologyArticlesController < ApplicationController
     @article = PeriodontologyArticle.first
     @title = t('.perio_title')
   end
-  
+
   def show
     @article = PeriodontologyArticle.find_by_permalink(params[:id])
     @title = @article.title
@@ -14,5 +14,5 @@ class PeriodontologyArticlesController < ApplicationController
       render :template => 'periodontology_articles/index'
     end
   end
-  
+
 end

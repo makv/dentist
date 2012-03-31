@@ -1,12 +1,12 @@
 <%= render 'header' %>
 <div class="container_16">
-  <div id = "first-paragraph" class="grid_16">
-  <ul class="link-list">
-    <% Link.find_all_by_locale(I18n.locale).each do |link| %>
-    <li>
-      <%= link_to(link.title, link.url, :title => link.description, :class => "links") %>
-    </li>
-    <% end %>
-  </ul>
+  <div id="first-paragraph" class="grid_16">
+    <ul class="link-list">
+      <% Link.find_all_by_locale(I18n.locale).each do |link| %>
+          <li>
+            <%= link_to(link.title, link.url, :title => link.description, :class => "links") %>
+          </li>
+      <% end %>
+    </ul>
   </div>
 </div>

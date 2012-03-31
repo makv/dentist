@@ -1,14 +1,14 @@
 <%= render 'header' %>
 <div class="container_16">
   <div id="first-paragraph" class="grid_16">
-  <ul class="pub-list">
-  <% Publication.find_all_by_locale(I18n.locale, :order => 'pub_date DESC').each do |pub| %>
-    <li><p><%= pub.title; %> - <i><%= pub.pub_date.month %>/<%= pub.pub_date.year %></i>
-        <%= link_to(image_tag('pdf-icon.png', :class => "faded"), pub.pub_pdf.url,
-                                              :title => pub.description, :class => "links") %>
-        </p>                                      
-    </li>
-  <% end %>
-  </ul>
+    <ul class="pub-list">
+      <% Publication.find_all_by_locale(I18n.locale, :order => 'pub_date DESC').each do |pub| %>
+          <li><p><%= pub.title; %> - <i><%= pub.pub_date.month %>/<%= pub.pub_date.year %></i>
+            <%= link_to(image_tag('pdf-icon.png', :class => "faded"), pub.pub_pdf.url,
+                        :title => pub.description, :class => "links") %>
+          </p>
+          </li>
+      <% end %>
+    </ul>
   </div>
 </div>

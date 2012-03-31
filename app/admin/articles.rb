@@ -1,23 +1,23 @@
 ActiveAdmin.register Article do
-  
+
   controller do
     defaults :finder => :find_by_permalink
   end
-  
+
   filter :type, :as => :select, :collection => Article.select_options
-  filter :locale, :as => :select, :collection => ["gr", "en"]
+  filter :locale, :as => :select, :collection => LOCALES
   filter :title
-    
+
   index do |i|
     column :article_id
     column :type
     column :locale, :label => "Language"
     column "Title" do |article|
-      article.title.html_safe 
+      article.title.html_safe
     end
     default_actions
   end
-  
+
   show do |article|
     panel("Details") do
       attributes_table_for article do
@@ -40,12 +40,12 @@ ActiveAdmin.register Article do
       end
     end
   end
-  
+
   form do |f|
     f.inputs do
       f.input :title
       f.input :type, :as => :select, :collection => Article.select_options
-      f.input :locale, :as => :select, :collection => ["en", "gr"]
+      f.input :locale, :as => :select, :collection => LOCALES
     end
     f.inputs "Sections" do
       f.has_many :article_sections do |j|
@@ -59,5 +59,5 @@ ActiveAdmin.register Article do
     end
     f.buttons
   end
-  
+
 end

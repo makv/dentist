@@ -1,17 +1,18 @@
 <% 1.upto(2) do |i| %>
-  <div class="grid_8 <%= cycle("alpha", "omega") -%>">
-    <div class="accordion">
-      <% @article.article_sections.each do |section| %>
-        <% if !(section.position.modulo(2) == i-1)  %>
-          <h2 class="acc_trigger">
-            <a href="#"><%= section.title.html_safe %></a>
-          </h2>
-          <div class="acc_container block">
-            <%= section.content.html_safe %>
-          </div>
+    <div class="grid_8 <%= cycle("alpha", "omega") -%>">
+      <div class="accordion">
+        <% @article.article_sections.each do |section| %>
+            <% if !(section.position.modulo(2) == i-1) %>
+                <h2 class="acc_trigger">
+                  <a href="#"><%= section.title.html_safe %></a>
+                </h2>
+
+                <div class="acc_container block">
+                  <%= section.content.html_safe %>
+                </div>
+            <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-  </div>
 <% end %>
 <%= render 'accordion.js' %>

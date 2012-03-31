@@ -1,22 +1,22 @@
 <script type="text/javascript">
 $(function() {
 
-	$("ul.tabs").tabs("div.panes > div", {
-	
-	  initialIndex: <%= @article.article_id-1 %>,
-		effect: 'fade',
-    fadeInSpeed: 1500,
-    
-		onBeforeClick: function(event, i) {
-			// get the pane to be opened
-			var pane = this.getPanes().eq(i);
-			if (pane.is(":empty")) {
-				// load it with a page specified in the tab's href attribute
-				pane.load(this.getTabs().eq(i).attr("href"));
-			}
-		}
-	});
-  
+        $("ul.tabs").tabs("div.panes > div", {
+
+            initialIndex: <%= @article.article_id-1 %>,
+            effect:'fade',
+            fadeInSpeed:1500,
+
+            onBeforeClick:function (event, i) {
+                // get the pane to be opened
+                var pane = this.getPanes().eq(i);
+                if (pane.is(":empty")) {
+                    // load it with a page specified in the tab's href attribute
+                    pane.load(this.getTabs().eq(i).attr("href"));
+                }
+}
+});
+
 });
 
 </script>

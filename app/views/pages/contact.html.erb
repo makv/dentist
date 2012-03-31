@@ -1,39 +1,47 @@
-  <div id="site-content">
-    <div id="header-articles" class="page-header">
-      <div class="container_12">
-        <div class="grid_12">
-          <h2><%= t('.header') %></h2>
-          <p><%= t('.paragraph') %></p>
-        </div>
+<div id="site-content">
+  <div id="header-articles" class="page-header">
+    <div class="container_12">
+      <div class="grid_12">
+        <h2><%= t('.header') %></h2>
+
+        <p><%= t('.paragraph') %></p>
       </div>
-    </div>
-    <div class="clear"></div>
-    <div class="container_16" id="first-paragraph">
-      <div class="grid_8 alpha accordion">
-        <h2 class="acc_trigger"><a href="#"><%= t('.address') %></a></h2>
-        <div class="acc_container" style="display: none;">
-          <div class="block">
-            <p><%= t('.addressloc') %><br/><%= t('.postal') %></p>
-          </div>
-        </div>
-        <h2 class="acc_trigger active"><a href="#"><%= t('.telephones') %></a></h2>
-        <div class="acc_container" style="display: block;">
-          <div class="block">
-            <p>+30 210 72 59 059<br/>
-              +30 210 72 58 878</p>
-          </div>
-        </div>
-        <h2 class="acc_trigger"><a href="#"><%= t('.fax') %></a></h2>
-        <div class="acc_container" style="display: none;">
-          <div class="block">
-            <p>+30 210 72 58 878</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid_8 omega boxed-content">
-        <iframe width="450" height="350" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msa=0&amp;msid=209197405553506610947.0004ad3aa1dedd63a6875&amp;ie=UTF8&amp;t=m&amp;vpsrc=6&amp;ll=37.976471,23.746795&amp;spn=0,0&amp;output=embed"></iframe>
-        <br />
-        <small>View <a href="http://maps.google.com/maps/ms?msa=0&amp;msid=209197405553506610947.0004ad3aa1dedd63a6875&amp;ie=UTF8&amp;t=m&amp;vpsrc=6&amp;ll=37.976471,23.746795&amp;spn=0,0&amp;source=embed" style="color:#0000FF;text-align:left">Dr. Anastasios Mamalis Dental Office</a> in a larger map</small> </div>
     </div>
   </div>
-  <%= render 'periodontology_articles/accordion.js' %>
+  <div class="clear"></div>
+  <div class="container_16" id="first-paragraph">
+    <div class="grid_8 alpha accordion">
+      <h2 class="acc_trigger"><a href="#"><%= t('.address') %></a></h2>
+
+      <div class="acc_container" style="display: none;">
+        <div class="block">
+          <p><%= t('.addressloc') %><br/><%= t('.postal') %></p>
+        </div>
+      </div>
+      <h2 class="acc_trigger active"><a href="#"><%= t('.telephones') %></a></h2>
+
+      <div class="acc_container" style="display: block;">
+        <div class="block">
+          <p>+30 210 72 59 059<br/>
+            +30 210 72 58 878</p>
+        </div>
+      </div>
+      <h2 class="acc_trigger"><a href="#"><%= t('.fax') %></a></h2>
+
+      <div class="acc_container" style="display: none;">
+        <div class="block">
+          <p>+30 210 72 58 878</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid_8 omega boxed-content">
+      <iframe width="450" height="350" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msa=0&amp;msid=209197405553506610947.0004ad3aa1dedd63a6875&amp;ie=UTF8&amp;t=m&amp;vpsrc=6&amp;ll=37.976471,23.746795&amp;spn=0,0&amp;output=embed"></iframe>
+      <br/>
+      <small>View
+        <a href="http://maps.google.com/maps/ms?msa=0&amp;msid=209197405553506610947.0004ad3aa1dedd63a6875&amp;ie=UTF8&amp;t=m&amp;vpsrc=6&amp;ll=37.976471,23.746795&amp;spn=0,0&amp;source=embed" style="color:#0000FF;text-align:left">Dr.
+          Anastasios Mamalis Dental Office</a> in a larger map
+      </small>
+    </div>
+  </div>
+</div>
+<%= render 'periodontology_articles/accordion.js' %>

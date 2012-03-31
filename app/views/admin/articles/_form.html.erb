@@ -1,14 +1,14 @@
 <%= semantic_form_for [:admin, @article] do |f| %>
-  <%= f.inputs "Details", :id => "details" do %>
-    <%= f.input :type, :as => :select, :collection => Article.select_options %>
-    <%= f.input :locale, :as => :select, :collection => ["en", "gr"] %>
-    <%= f.input :title %>
-   <% end %>
-  <%= f.inputs "Content", :id => "content" do %>
-    <%= f.has_many :article_sections do |fs| %>
-      <%= fs.input :title %>
-      <%= fs.input :content, :input_html => {:class => 'editor'} %>
+    <%= f.inputs "Details", :id => "details" do %>
+        <%= f.input :type, :as => :select, :collection => Article.select_options %>
+        <%= f.input :locale, :as => :select, :collection => ["en", "gr"] %>
+        <%= f.input :title %>
     <% end %>
-  <% end %>
-  <%= f.buttons :commit %> 
+    <%= f.inputs "Content", :id => "content" do %>
+        <%= f.has_many :article_sections do |fs| %>
+            <%= fs.input :title %>
+            <%= fs.input :content, :input_html => {:class => 'editor'} %>
+        <% end %>
+    <% end %>
+    <%= f.buttons :commit %>
 <% end %>

@@ -12,17 +12,17 @@
 #
 
 class ArticleSection < ActiveRecord::Base
-	belongs_to :article
-	acts_as_list :scope => :article
+  belongs_to :article
+  acts_as_list :scope => :article
 
-	# validates :content, :presence => true
-	# validates :position, :presence => true
+  # validates :content, :presence => true
+  # validates :position, :presence => true
 
-	attr_accessible :id
-	attr_accessible :title
-	attr_accessible :content
-  	attr_accessible :article_id
-  	attr_accessible :position
-  	attr_accessible :created_at
-  	attr_accessible :updated_at
+  attr_accessible :id
+  attr_accessible :title
+  attr_accessible :content
+  attr_accessible :article_id
+  attr_accessible :position
+  attr_accessible :created_at
+  attr_accessible :updated_at
 end

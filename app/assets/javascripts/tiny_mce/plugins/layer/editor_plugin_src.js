@@ -8,255 +8,257 @@
  * Contributing: http://tinymce.moxiecode.com/contributing
  */
 
-(function() {
-	function findParentLayer(node) {
-		do {
-			if (node.className && node.className.indexOf('mceItemLayer') != -1) {
-				return node;
-			}
-		} while (node = node.parentNode);
-	};
+(function () {
+    function findParentLayer(node) {
+        do {
+            if (node.className && node.className.indexOf('mceItemLayer') != -1) {
+                return node;
+            }
+        } while (node = node.parentNode);
+    }
 
-	tinymce.create('tinymce.plugins.Layer', {
-		init : function(ed, url) {
-			var t = this;
+    ;
 
-			t.editor = ed;
+    tinymce.create('tinymce.plugins.Layer', {
+        init:function (ed, url) {
+            var t = this;
 
-			// Register commands
-			ed.addCommand('mceInsertLayer', t._insertLayer, t);
+            t.editor = ed;
 
-			ed.addCommand('mceMoveForward', function() {
-				t._move(1);
-			});
+            // Register commands
+            ed.addCommand('mceInsertLayer', t._insertLayer, t);
 
-			ed.addCommand('mceMoveBackward', function() {
-				t._move(-1);
-			});
+            ed.addCommand('mceMoveForward', function () {
+                t._move(1);
+            });
 
-			ed.addCommand('mceMakeAbsolute', function() {
-				t._toggleAbsolute();
-			});
+            ed.addCommand('mceMoveBackward', function () {
+                t._move(-1);
+            });
 
-			// Register buttons
-			ed.addButton('moveforward', {title : 'layer.forward_desc', cmd : 'mceMoveForward'});
-			ed.addButton('movebackward', {title : 'layer.backward_desc', cmd : 'mceMoveBackward'});
-			ed.addButton('absolute', {title : 'layer.absolute_desc', cmd : 'mceMakeAbsolute'});
-			ed.addButton('insertlayer', {title : 'layer.insertlayer_desc', cmd : 'mceInsertLayer'});
+            ed.addCommand('mceMakeAbsolute', function () {
+                t._toggleAbsolute();
+            });
 
-			ed.onInit.add(function() {
-				var dom = ed.dom;
+            // Register buttons
+            ed.addButton('moveforward', {title:'layer.forward_desc', cmd:'mceMoveForward'});
+            ed.addButton('movebackward', {title:'layer.backward_desc', cmd:'mceMoveBackward'});
+            ed.addButton('absolute', {title:'layer.absolute_desc', cmd:'mceMakeAbsolute'});
+            ed.addButton('insertlayer', {title:'layer.insertlayer_desc', cmd:'mceInsertLayer'});
 
-				if (tinymce.isIE)
-					ed.getDoc().execCommand('2D-Position', false, true);
-			});
+            ed.onInit.add(function () {
+                var dom = ed.dom;
 
-			// Remove serialized styles when selecting a layer since it might be changed by a drag operation
-			ed.onMouseUp.add(function(ed, e) {
-				var layer = findParentLayer(e.target);
-	
-				if (layer) {
-					ed.dom.setAttrib(layer, 'data-mce-style', '');
-				}
-			});
+                if (tinymce.isIE)
+                    ed.getDoc().execCommand('2D-Position', false, true);
+            });
 
-			// Fixes edit focus issues with layers on Gecko
-			// This will enable designMode while inside a layer and disable it when outside
-			ed.onMouseDown.add(function(ed, e) {
-				var node = e.target, doc = ed.getDoc(), parent;
+            // Remove serialized styles when selecting a layer since it might be changed by a drag operation
+            ed.onMouseUp.add(function (ed, e) {
+                var layer = findParentLayer(e.target);
 
-				if (tinymce.isGecko) {
-					if (findParentLayer(node)) {
-						if (doc.designMode !== 'on') {
-							doc.designMode = 'on';
+                if (layer) {
+                    ed.dom.setAttrib(layer, 'data-mce-style', '');
+                }
+            });
 
-							// Repaint caret
-							node = doc.body;
-							parent = node.parentNode;
-							parent.removeChild(node);
-							parent.appendChild(node);
-						}
-					} else if (doc.designMode == 'on') {
-						doc.designMode = 'off';
-					}
-				}
-			});
+            // Fixes edit focus issues with layers on Gecko
+            // This will enable designMode while inside a layer and disable it when outside
+            ed.onMouseDown.add(function (ed, e) {
+                var node = e.target, doc = ed.getDoc(), parent;
 
-			ed.onNodeChange.add(t._nodeChange, t);
-			ed.onVisualAid.add(t._visualAid, t);
-		},
+                if (tinymce.isGecko) {
+                    if (findParentLayer(node)) {
+                        if (doc.designMode !== 'on') {
+                            doc.designMode = 'on';
 
-		getInfo : function() {
-			return {
-				longname : 'Layer',
-				author : 'Moxiecode Systems AB',
-				authorurl : 'http://tinymce.moxiecode.com',
-				infourl : 'http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/layer',
-				version : tinymce.majorVersion + "." + tinymce.minorVersion
-			};
-		},
+                            // Repaint caret
+                            node = doc.body;
+                            parent = node.parentNode;
+                            parent.removeChild(node);
+                            parent.appendChild(node);
+                        }
+                    } else if (doc.designMode == 'on') {
+                        doc.designMode = 'off';
+                    }
+                }
+            });
 
-		// Private methods
+            ed.onNodeChange.add(t._nodeChange, t);
+            ed.onVisualAid.add(t._visualAid, t);
+        },
 
-		_nodeChange : function(ed, cm, n) {
-			var le, p;
+        getInfo:function () {
+            return {
+                longname:'Layer',
+                author:'Moxiecode Systems AB',
+                authorurl:'http://tinymce.moxiecode.com',
+                infourl:'http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/layer',
+                version:tinymce.majorVersion + "." + tinymce.minorVersion
+            };
+        },
 
-			le = this._getParentLayer(n);
-			p = ed.dom.getParent(n, 'DIV,P,IMG');
+        // Private methods
 
-			if (!p) {
-				cm.setDisabled('absolute', 1);
-				cm.setDisabled('moveforward', 1);
-				cm.setDisabled('movebackward', 1);
-			} else {
-				cm.setDisabled('absolute', 0);
-				cm.setDisabled('moveforward', !le);
-				cm.setDisabled('movebackward', !le);
-				cm.setActive('absolute', le && le.style.position.toLowerCase() == "absolute");
-			}
-		},
+        _nodeChange:function (ed, cm, n) {
+            var le, p;
 
-		// Private methods
+            le = this._getParentLayer(n);
+            p = ed.dom.getParent(n, 'DIV,P,IMG');
 
-		_visualAid : function(ed, e, s) {
-			var dom = ed.dom;
+            if (!p) {
+                cm.setDisabled('absolute', 1);
+                cm.setDisabled('moveforward', 1);
+                cm.setDisabled('movebackward', 1);
+            } else {
+                cm.setDisabled('absolute', 0);
+                cm.setDisabled('moveforward', !le);
+                cm.setDisabled('movebackward', !le);
+                cm.setActive('absolute', le && le.style.position.toLowerCase() == "absolute");
+            }
+        },
 
-			tinymce.each(dom.select('div,p', e), function(e) {
-				if (/^(absolute|relative|fixed)$/i.test(e.style.position)) {
-					if (s)
-						dom.addClass(e, 'mceItemVisualAid');
-					else
-						dom.removeClass(e, 'mceItemVisualAid');
+        // Private methods
 
-					dom.addClass(e, 'mceItemLayer');
-				}
-			});
-		},
+        _visualAid:function (ed, e, s) {
+            var dom = ed.dom;
 
-		_move : function(d) {
-			var ed = this.editor, i, z = [], le = this._getParentLayer(ed.selection.getNode()), ci = -1, fi = -1, nl;
+            tinymce.each(dom.select('div,p', e), function (e) {
+                if (/^(absolute|relative|fixed)$/i.test(e.style.position)) {
+                    if (s)
+                        dom.addClass(e, 'mceItemVisualAid');
+                    else
+                        dom.removeClass(e, 'mceItemVisualAid');
 
-			nl = [];
-			tinymce.walk(ed.getBody(), function(n) {
-				if (n.nodeType == 1 && /^(absolute|relative|static)$/i.test(n.style.position))
-					nl.push(n); 
-			}, 'childNodes');
+                    dom.addClass(e, 'mceItemLayer');
+                }
+            });
+        },
 
-			// Find z-indexes
-			for (i=0; i<nl.length; i++) {
-				z[i] = nl[i].style.zIndex ? parseInt(nl[i].style.zIndex) : 0;
+        _move:function (d) {
+            var ed = this.editor, i, z = [], le = this._getParentLayer(ed.selection.getNode()), ci = -1, fi = -1, nl;
 
-				if (ci < 0 && nl[i] == le)
-					ci = i;
-			}
+            nl = [];
+            tinymce.walk(ed.getBody(), function (n) {
+                if (n.nodeType == 1 && /^(absolute|relative|static)$/i.test(n.style.position))
+                    nl.push(n);
+            }, 'childNodes');
 
-			if (d < 0) {
-				// Move back
+            // Find z-indexes
+            for (i = 0; i < nl.length; i++) {
+                z[i] = nl[i].style.zIndex ? parseInt(nl[i].style.zIndex) : 0;
 
-				// Try find a lower one
-				for (i=0; i<z.length; i++) {
-					if (z[i] < z[ci]) {
-						fi = i;
-						break;
-					}
-				}
+                if (ci < 0 && nl[i] == le)
+                    ci = i;
+            }
 
-				if (fi > -1) {
-					nl[ci].style.zIndex = z[fi];
-					nl[fi].style.zIndex = z[ci];
-				} else {
-					if (z[ci] > 0)
-						nl[ci].style.zIndex = z[ci] - 1;
-				}
-			} else {
-				// Move forward
+            if (d < 0) {
+                // Move back
 
-				// Try find a higher one
-				for (i=0; i<z.length; i++) {
-					if (z[i] > z[ci]) {
-						fi = i;
-						break;
-					}
-				}
+                // Try find a lower one
+                for (i = 0; i < z.length; i++) {
+                    if (z[i] < z[ci]) {
+                        fi = i;
+                        break;
+                    }
+                }
 
-				if (fi > -1) {
-					nl[ci].style.zIndex = z[fi];
-					nl[fi].style.zIndex = z[ci];
-				} else
-					nl[ci].style.zIndex = z[ci] + 1;
-			}
+                if (fi > -1) {
+                    nl[ci].style.zIndex = z[fi];
+                    nl[fi].style.zIndex = z[ci];
+                } else {
+                    if (z[ci] > 0)
+                        nl[ci].style.zIndex = z[ci] - 1;
+                }
+            } else {
+                // Move forward
 
-			ed.execCommand('mceRepaint');
-		},
+                // Try find a higher one
+                for (i = 0; i < z.length; i++) {
+                    if (z[i] > z[ci]) {
+                        fi = i;
+                        break;
+                    }
+                }
 
-		_getParentLayer : function(n) {
-			return this.editor.dom.getParent(n, function(n) {
-				return n.nodeType == 1 && /^(absolute|relative|static)$/i.test(n.style.position);
-			});
-		},
+                if (fi > -1) {
+                    nl[ci].style.zIndex = z[fi];
+                    nl[fi].style.zIndex = z[ci];
+                } else
+                    nl[ci].style.zIndex = z[ci] + 1;
+            }
 
-		_insertLayer : function() {
-			var ed = this.editor, dom = ed.dom, p = dom.getPos(dom.getParent(ed.selection.getNode(), '*')), body = ed.getBody();
+            ed.execCommand('mceRepaint');
+        },
 
-			ed.dom.add(body, 'div', {
-				style : {
-					position : 'absolute',
-					left : p.x,
-					top : (p.y > 20 ? p.y : 20),
-					width : 100,
-					height : 100
-				},
-				'class' : 'mceItemVisualAid mceItemLayer'
-			}, ed.selection.getContent() || ed.getLang('layer.content'));
+        _getParentLayer:function (n) {
+            return this.editor.dom.getParent(n, function (n) {
+                return n.nodeType == 1 && /^(absolute|relative|static)$/i.test(n.style.position);
+            });
+        },
 
-			// Workaround for IE where it messes up the JS engine if you insert a layer on IE 6,7
-			if (tinymce.isIE)
-				dom.setHTML(body, body.innerHTML);
-		},
+        _insertLayer:function () {
+            var ed = this.editor, dom = ed.dom, p = dom.getPos(dom.getParent(ed.selection.getNode(), '*')), body = ed.getBody();
 
-		_toggleAbsolute : function() {
-			var ed = this.editor, le = this._getParentLayer(ed.selection.getNode());
+            ed.dom.add(body, 'div', {
+                style:{
+                    position:'absolute',
+                    left:p.x,
+                    top:(p.y > 20 ? p.y : 20),
+                    width:100,
+                    height:100
+                },
+                'class':'mceItemVisualAid mceItemLayer'
+            }, ed.selection.getContent() || ed.getLang('layer.content'));
 
-			if (!le)
-				le = ed.dom.getParent(ed.selection.getNode(), 'DIV,P,IMG');
+            // Workaround for IE where it messes up the JS engine if you insert a layer on IE 6,7
+            if (tinymce.isIE)
+                dom.setHTML(body, body.innerHTML);
+        },
 
-			if (le) {
-				if (le.style.position.toLowerCase() == "absolute") {
-					ed.dom.setStyles(le, {
-						position : '',
-						left : '',
-						top : '',
-						width : '',
-						height : ''
-					});
+        _toggleAbsolute:function () {
+            var ed = this.editor, le = this._getParentLayer(ed.selection.getNode());
 
-					ed.dom.removeClass(le, 'mceItemVisualAid');
-					ed.dom.removeClass(le, 'mceItemLayer');
-				} else {
-					if (le.style.left == "")
-						le.style.left = 20 + 'px';
+            if (!le)
+                le = ed.dom.getParent(ed.selection.getNode(), 'DIV,P,IMG');
 
-					if (le.style.top == "")
-						le.style.top = 20 + 'px';
+            if (le) {
+                if (le.style.position.toLowerCase() == "absolute") {
+                    ed.dom.setStyles(le, {
+                        position:'',
+                        left:'',
+                        top:'',
+                        width:'',
+                        height:''
+                    });
 
-					if (le.style.width == "")
-						le.style.width = le.width ? (le.width + 'px') : '100px';
+                    ed.dom.removeClass(le, 'mceItemVisualAid');
+                    ed.dom.removeClass(le, 'mceItemLayer');
+                } else {
+                    if (le.style.left == "")
+                        le.style.left = 20 + 'px';
 
-					if (le.style.height == "")
-						le.style.height = le.height ? (le.height + 'px') : '100px';
+                    if (le.style.top == "")
+                        le.style.top = 20 + 'px';
 
-					le.style.position = "absolute";
+                    if (le.style.width == "")
+                        le.style.width = le.width ? (le.width + 'px') : '100px';
 
-					ed.dom.setAttrib(le, 'data-mce-style', '');
-					ed.addVisual(ed.getBody());
-				}
+                    if (le.style.height == "")
+                        le.style.height = le.height ? (le.height + 'px') : '100px';
 
-				ed.execCommand('mceRepaint');
-				ed.nodeChanged();
-			}
-		}
-	});
+                    le.style.position = "absolute";
 
-	// Register plugin
-	tinymce.PluginManager.add('layer', tinymce.plugins.Layer);
+                    ed.dom.setAttrib(le, 'data-mce-style', '');
+                    ed.addVisual(ed.getBody());
+                }
+
+                ed.execCommand('mceRepaint');
+                ed.nodeChanged();
+            }
+        }
+    });
+
+    // Register plugin
+    tinymce.PluginManager.add('layer', tinymce.plugins.Layer);
 })();

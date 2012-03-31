@@ -3,7 +3,7 @@ class ImplantsArticlesController < ApplicationController
     @article = ImplantsArticle.first
     @title = t('.implants_title')
   end
-  
+
   def show
     @article = ImplantsArticle.find_by_permalink(params[:id])
     @title = @article.title

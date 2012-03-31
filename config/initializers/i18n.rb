@@ -6,3 +6,4 @@ LANGUAGES = [
   ['English', 'en'],
   ["Ελληνικά".html_safe, 'gr']
 ]
+LOCALES = %w(gr en)

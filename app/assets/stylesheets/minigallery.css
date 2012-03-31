@@ -1,15 +1,17 @@
 .minigallery {
-	float: left;
+    float: left;
 }
-.minigallery ol, ul {
-	list-style: none;
-}
-.minigallery li {
-	float: left;
-	position: relative;
 
-	border: 1px solid #DDD;
-	background: white;
-	margin-right: 10px;
-	margin-bottom: 10px;
+.minigallery ol, ul {
+    list-style: none;
+}
+
+.minigallery li {
+    float: left;
+    position: relative;
+
+    border: 1px solid #DDD;
+    background: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }

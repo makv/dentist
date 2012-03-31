@@ -1,15 +1,15 @@
 ActiveAdmin.register Gallery do
-  
+
   config.clear_action_items!
   config.clear_sidebar_sections!
-  
+
   index do
     column :title
-    column :description      
+    column :description
     column :locale, :label => "Language"
     default_actions
   end
-  
+
   show do |gallery|
     panel("Details") do
       attributes_table_for gallery do
@@ -28,7 +28,7 @@ ActiveAdmin.register Gallery do
       end
     end
   end
-  
+
   form do |f|
     f.inputs do
       f.input :title
