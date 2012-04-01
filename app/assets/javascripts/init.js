@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //$.noConflict();
+
     $("a[rel^='prettyPhoto[homegallery]']").prettyPhoto();
     $('.simpleSlideShow').slideShow({
         interval:3
@@ -13,7 +13,22 @@ $(document).ready(function () {
         })
         .ajaxStop(function () {
             $(this).hide();
-        })
-    ;
-
+        });
+    toTop();
 });
+
+function toTop () {
+    $(function() {
+        $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+                $('#toTop').fadeIn();   
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
+     
+        $('#toTop').click(function() {
+            $('body,html').animate({scrollTop:0},800);
+        }); 
+    });
+}
