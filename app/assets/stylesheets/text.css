@@ -61,7 +61,7 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     margin-bottom: 20px;
 }
 
-@font-face {
+/*@font-face {
     font-family: 'ComfortaaRegular';
     src: url('comfortaa-regular-webfont.eot');
     src: url('comfortaa-regular-webfont.eot?#iefix') format('embedded-opentype'), url('comfortaa-regular-webfont.woff') format('woff'), url('comfortaa-regular-webfont.ttf') format('truetype'), url('comfortaa-regular-webfont.svg#ComfortaaRegular') format('svg');
@@ -69,3 +69,4 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
     font-style: normal;
 
 }
+*/
