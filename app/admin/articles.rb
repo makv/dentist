@@ -54,7 +54,7 @@ ActiveAdmin.register Article do
         end
         j.inputs :position
         j.inputs :title
-        j.inputs :content, :input_html => {:class => 'editor'}
+        j.inputs :content
       end
     end
     f.buttons
