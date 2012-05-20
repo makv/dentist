@@ -5,7 +5,7 @@ Dentist::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  scope '(:locale)' do
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
 
     resources :periodontology_articles
     resources :implants_articles
@@ -19,8 +19,9 @@ Dentist::Application.routes.draw do
     root :to => 'pages#home'
 
   end
-  
-  
+
+  match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
+  match '', to: redirect("/#{I18n.default_locale}")
  
   # The priority is based upon order of creation:
   # first created -> highest priority.

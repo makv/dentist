@@ -20,10 +20,10 @@
         <%= link_to thtml('nav_contact'), contact_path %>
       </li>
       <li>
-        <%= link_to(image_tag('greek.png', :class => "lang"), "/gr") %>
+        <%= link_to_unless_current(image_tag('greek.png', :class => "lang"), {:locale => "gr"}) %>
       </li>
       <li>
-        <%= link_to(image_tag('english.png', :class => "lang"), "/en") %>
+        <%= link_to_unless_current(image_tag('english.png', :class => "lang"), {:locale => "en"}) %>
       </li>
     </ul>
   </div>
